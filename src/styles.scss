@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-color: #eee;
+  background-color:#003566 !important;
 }
 
 .card.card-cascade .view.gradient-card-header {
@@ -10,7 +10,7 @@ body {
 }
 
 .card.card-cascade h3,
-.card.card-cascade h4,
+.card.card-cascade h4
 {
   margin-bottom: 0px;
 }
@@ -45,14 +45,61 @@ body {
   max-height: 50px
 }
 
+/*
 @media (min-width: 1200px) {
   .navbar, .page-footer, main {
-    padding-left: 270px
+    
   }
-}
+}*/
 
 @media (max-width: 1199.98px) {
   .sidebar-fixed {
     display: none
   }
 }
+
+@media (min-width: 1200px){
+.col-xl-3 {
+    flex: 0 0 16% !important; 
+    max-width: 19% !important;
+}
+}
+.col-xl-3 {
+  padding-left: 3px !important; 
+  padding-right: 3px !important;
+}
+
+@media (min-width: 992px){
+.ml-lg-5, .mx-lg-5 {
+    margin-left: 2rem !important;
+    margin-right: 1rem !important;
+}
+}
+.stat-card{
+  margin-right: -60px;
+}
+.table{
+  color: #fff;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #001a33;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.table-heading{
+  color: #fff;
+  background-color: #004280;
+  padding: 4px;
+  text-align: center;
+}
+
+.card-customize .card-body{
+  padding: 0em;
+}
+.card-header{color: #fff;}

@@ -2,7 +2,7 @@
 <header>
 
     <!-- Sidebar -->
-    <div class="sidebar-fixed position-fixed">
+    <div class="sidebar-fixed position-fixed" mdbCollapse #test="bs-collapse">
 
         <a class="logo-wrapper waves-effect">
             <img src="../../../../assets/img/angular-mdb.png" class="img-fluid" alt="">
@@ -28,65 +28,44 @@
     <!-- Sidebar -->
 
     <!--Navbar-->
-    <mdb-navbar [containerInside]="false" SideClass="navbar navbar-expand-lg navbar-light white">
+    <!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark" [containerInside]="false">
 
-        <!-- Navbar brand -->
-        <logo class="ml-3">
-            <a class="navbar-brand" href="https://mdbootstrap.com/angular/angular-bootstrap-getting-started/">
-                <strong class="blue-text">MDB</strong>
-            </a>
-        </logo>
+    <a (click)="test.toggle()" mdbBtn color="primary" class="p-3 button-collapse"><mdb-icon fas icon="bars"></mdb-icon></a>
 
-        <!-- Collapsible content -->
-        <links>
 
-            <!-- Links -->
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" mdbWavesEffect>Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://mdbootstrap.com/angular/angular-bootstrap-getting-started/" target="_blank" mdbWavesEffect>About MDB</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://mdbootstrap.com/angular/getting-started/" target="_blank" mdbWavesEffect>Free download</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://mdbootstrap.com/angular/angular-tutorial/" target="_blank" mdbWavesEffect>Free tutorials</a>
-                </li>
-            </ul>
-            <!-- Links -->
-
-            <!-- Search form -->
-            <ul class="navbar-nav nav-flex-icons">
-
-                    <li class="nav-item">
-                        <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank" mdbWavesEffect>
-                            <mdb-icon fab icon="facebook-f"></mdb-icon>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://twitter.com/MDBootstrap" class="nav-link" target="_blank" mdbWavesEffect>
-                            <mdb-icon fab icon="twitter"></mdb-icon>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light"
-                            target="_blank" mdbWavesEffect>
-                            <mdb-icon fab icon="github" class="mr-2"></mdb-icon>MDB GitHub
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://mdbootstrap.com/products/angular-ui-kit/" class="ml-1 nav-link border border-light rounded" mdbWavesEffect>
-                            <mdb-icon far icon="gem" class=" left"></mdb-icon> Go Pro</a>
-                    </li>
-                </ul>
-        </links>
-        <!-- Collapsible content -->
-
-    </mdb-navbar>
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#">Dashboard</a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="envelope"></mdb-icon> Contact<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="cog"></mdb-icon> Settings</a>
+        </li>
+  
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            <mdb-icon fas icon="user"></mdb-icon> Profile<span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Log out</a>
+          </div>
+        </li>
+  
+      </ul>
+      <!-- Links -->
+    </links>
+    <!-- Collapsible content -->
+  
+  </mdb-navbar>
+  <!--/.Navbar-->
     <!--/.Navbar-->
 
 </header>

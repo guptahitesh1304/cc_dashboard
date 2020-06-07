@@ -1,7 +1,7 @@
 <!-- Heading -->
-<mdb-card class="mb-4 wow fadeIn">
+<!--mdb-card class="mb-4 wow fadeIn">
 
-    <!--Card content-->
+   
     <mdb-card-body class="d-sm-flex justify-content-between">
 
         <h4 class="mb-sm-0 pt-3">
@@ -11,7 +11,7 @@
         </h4>
 
         <form class="d-flex md-form justify-content-center my-0">
-            <!-- Default input -->
+            
             <input type="search" placeholder="Type your query" aria-label="Search" class="form-control" mdbInput>
             <button mdbBtn color="primary" size="sm" class="my-0 p" type="submit">
                 <mdb-icon fas icon="search"></mdb-icon>
@@ -21,22 +21,113 @@
 
     </mdb-card-body>
 
-</mdb-card>
+</mdb-card-->
 <!-- Heading -->
 
 
-<app-stats-card></app-stats-card>
+<!--app-stats-card></app-stats-card-->
+<app-stats-card2></app-stats-card2>
+<!--Grid row-->
+<div class="row wow fadeIn mt-5">
 
+    <!--Grid column-->
+    <div class="col-md-6 mb-4 card-customize">
+
+        <!--Card-->
+        <mdb-card>
+            <div class="table-heading">Table heading here</div>
+            <!--Card content-->
+            <mdb-card-body>
+
+                <!-- Table  -->
+                <table class="table table-hover">
+                    <!-- Table head -->
+                    <thead class="">
+                    <tr>
+                        <th>#</th>
+                        <th>Lorem</th>
+                        <th>Ipsum</th>
+                        <th>Dolor</th>
+                    </tr>
+                    </thead>
+                    <!-- Table head -->
+
+                    <!-- Table body -->
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Cell 1</td>
+                        <td>Cell 2</td>
+                        <td>Cell 3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Cell 4</td>
+                        <td>Cell 5</td>
+                        <td>Cell 6</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Cell 7</td>
+                        <td>Cell 8</td>
+                        <td>Cell 9</td>
+                    </tr>
+                    </tbody>
+                    <!-- Table body -->
+                </table>
+                <!-- Table  -->
+
+            </mdb-card-body>
+
+        </mdb-card>
+        <!--/.Card-->
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+     <!--Grid column-->
+     <div class="col-lg-4 col-md-12 mb-4">
+
+        <!--Card-->
+        <mdb-card>
+
+            <!-- Card header -->
+            <div class="card-header">Line chart</div>
+
+            <!--Card content-->
+            <mdb-card-body>
+
+                <div style="display: block">
+                    <canvas mdbChart [chartType]="chart3Type" [datasets]="chartDatasets" [labels]="chartLabels"
+                            [colors]="chartColors" [options]="chartOptions"
+                            [legend]="true">
+                    </canvas>
+                </div>
+            </mdb-card-body>
+
+        </mdb-card>
+        <!--/.Card-->
+
+    </div>
+    <!--Grid column-->
+
+</div>
+<!--Grid row-->
 
 <!--Grid row-->
 <div class="row wow fadeIn mt-5">
 
     <!--Grid column-->
-    <div class="col-md-9 mb-4">
+    <div class="col-lg-4 col-md-12 mb-4">
 
         <!--Card-->
         <mdb-card>
 
+             <!-- Card header -->
+             <div class="card-header">
+                CALL RECIEVED/ANSWERED/ABANDONED
+            </div>
             <!--Card content-->
             <mdb-card-body>
 
@@ -120,121 +211,7 @@
 </div>
 <!--Grid row-->
 
-<!--Grid row-->
-<div class="row wow fadeIn">
 
-    <!--Grid column-->
-    <div class="col-md-6 mb-4">
-
-        <!--Card-->
-        <mdb-card>
-
-            <!--Card content-->
-            <mdb-card-body>
-
-                <!-- Table  -->
-                <table class="table table-hover">
-                    <!-- Table head -->
-                    <thead class="blue-grey lighten-4">
-                    <tr>
-                        <th>#</th>
-                        <th>Lorem</th>
-                        <th>Ipsum</th>
-                        <th>Dolor</th>
-                    </tr>
-                    </thead>
-                    <!-- Table head -->
-
-                    <!-- Table body -->
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Cell 1</td>
-                        <td>Cell 2</td>
-                        <td>Cell 3</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Cell 4</td>
-                        <td>Cell 5</td>
-                        <td>Cell 6</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Cell 7</td>
-                        <td>Cell 8</td>
-                        <td>Cell 9</td>
-                    </tr>
-                    </tbody>
-                    <!-- Table body -->
-                </table>
-                <!-- Table  -->
-
-            </mdb-card-body>
-
-        </mdb-card>
-        <!--/.Card-->
-
-    </div>
-    <!--Grid column-->
-
-    <!--Grid column-->
-    <div class="col-md-6 mb-4">
-
-        <!--Card-->
-        <mdb-card>
-
-            <!--Card content-->
-            <mdb-card-body>
-
-                <!-- Table  -->
-                <table class="table table-hover">
-                    <!-- Table head -->
-                    <thead class="blue lighten-4">
-                    <tr>
-                        <th>#</th>
-                        <th>Lorem</th>
-                        <th>Ipsum</th>
-                        <th>Dolor</th>
-                    </tr>
-                    </thead>
-                    <!-- Table head -->
-
-                    <!-- Table body -->
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Cell 1</td>
-                        <td>Cell 2</td>
-                        <td>Cell 3</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Cell 4</td>
-                        <td>Cell 5</td>
-                        <td>Cell 6</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Cell 7</td>
-                        <td>Cell 8</td>
-                        <td>Cell 9</td>
-                    </tr>
-                    </tbody>
-                    <!-- Table body -->
-                </table>
-                <!-- Table  -->
-
-            </mdb-card-body>
-
-        </mdb-card>
-        <!--/.Card-->
-
-    </div>
-    <!--Grid column-->
-
-</div>
-<!--Grid row-->
 
 <!--Grid row-->
 <div class="row wow fadeIn">
@@ -321,21 +298,20 @@
 <!--Grid row-->
 
 <!--Grid row-->
-<div class="row wow fadeIn">
+<!--div class="row wow fadeIn">
 
-    <!--Grid column-->
     <div class="col-md-6 mb-4">
 
-        <!--Card-->
+        
         <mdb-card>
 
-            <!-- Card header -->
+            
             <div class="card-header">Google map</div>
 
-            <!--Card content-->
+            
             <mdb-card-body>
 
-                <!--Google map-->
+            
                 <div class="card-body text-center">
                     <agm-map [latitude]="map.lat" [longitude]="map.lng" [mapTypeId]="'roadmap'" style="height: 300px">
                         <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
@@ -345,22 +321,17 @@
             </mdb-card-body>
 
         </mdb-card>
-        <!--/.Card-->
 
     </div>
-    <!--Grid column-->
-
-    <!--Grid column-->
     <div class="col-md-6 mb-4">
 
-        <!--Card-->
+       
         <mdb-card>
 
 
             <div class="card-header">Modals</div>
-            <!--Card content-->
+            
             <mdb-card-body>
-                <!--Section: Position & Sizes-->
                 <section class="px-4">
                     <h4 class="mb-5 mt-4 dark-grey-text text-center font-bold">
                         <strong>Position & Sizes</strong>
@@ -370,10 +341,8 @@
                         <p class="lead">Click buttons below to launch modals demo</p>
                     </div>
 
-                    <!-- First row-->
                     <div class="row">
 
-                        <!--First column-->
                         <div class="col-md-3">
                             <h5 class="text-center mb-3">Frame Modal</h5>
 
@@ -443,9 +412,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--First column-->
 
-                        <!--Second column-->
                         <div class="col-md-3">
                             <h5 class="text-center mb-3">Side Modal</h5>
 
@@ -591,9 +558,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!--Second column-->
-
-                        <!--Third column-->
                         <div class="col-md-3">
                             <h5 class="text-center mb-3">Central Modal</h5>
 
@@ -627,20 +591,19 @@
                                 </button>
                                 <br>
 
-                                <!--Modal Form Login with Avatar Demo-->
                                 <div mdbModal #modalLoginAvatarDemo="mdb-modal" class="modal fade"
                                      id="modalLoginAvatarDemo" tabindex="-1" role="dialog"
                                      aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
-                                        <!--Content-->
+                                        
                                         <div class="modal-content">
 
-                                            <!--Header-->
+                                           
                                             <div class="modal-header">
                                                 <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg"
                                                      class="rounded-circle img-responsive">
                                             </div>
-                                            <!--Body-->
+                                            
                                             <div class="modal-body text-center mb-1">
 
                                                 <h5 class="mt-1 mb-2">Maria Doe</h5>
@@ -659,10 +622,8 @@
                                             </div>
 
                                         </div>
-                                        <!--/.Content-->
                                     </div>
                                 </div>
-                                <!--Modal Form Login with Avatar Demo-->
 
                                 <div mdbModal #centralRegular="mdb-modal" class="modal fade" id="basicExample"
                                      tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -749,9 +710,7 @@
 
                             </div>
                         </div>
-                        <!--Third column-->
-
-                        <!--Fourth column-->
+                        
                         <div class="col-md-3">
                             <h5 class="text-center mb-3">Fluid Modal</h5>
 
@@ -980,26 +939,21 @@
                                 </div>
                             </div>
                         </div>
-                        <!--Fourth column-->
 
                     </div>
-                    <!-- /.First row-->
 
                 </section>
-                <!--/Section: Position & Sizes-->
 
             </mdb-card-body>
-            <!--/Card content-->
         </mdb-card>
-        <!--/.Card-->
 
 
     </div>
-    <!--Grid column-->
+    
 
 
-</div>
+</div-->
 <!--Grid row-->
 
 
-<app-stats-card2></app-stats-card2>
+
