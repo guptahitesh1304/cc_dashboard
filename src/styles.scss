@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-color:#003566 !important;
+  background-color:#0b2a4b !important;
+  font-family: arial !important;
+  color: cornsilk !important;
 }
 
+header{background-color: #0b2a4b !important;}
 .card.card-cascade .view.gradient-card-header {
   padding: 1rem 1rem;
   text-align: center;
@@ -71,15 +74,15 @@ body {
 
 @media (min-width: 992px){
 .ml-lg-5, .mx-lg-5 {
-    margin-left: 2rem !important;
-    margin-right: 1rem !important;
+    margin-left: 3rem !important;
+    margin-right: 2rem !important;
 }
 }
 .stat-card{
   margin-right: -60px;
 }
 .table{
-  color: #fff;
+  color: #d9d9d9 !important;
 }
 .card {
   position: relative;
@@ -92,6 +95,43 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
+.blue-gradient {
+  background: linear-gradient(40deg, #00254d, #001933) !important;
+}
+
+.card-header-title{padding-top: 10px;
+  padding-left: 10px;
+  font-size: 14px;
+  color: cornsilk;}
+.cc-calls-stats-row .card-body{padding-top: 10px !important;}
+.card-queue .card-header, .cc-calls-stats-row .card-header{
+  padding: 10px 0px 10px 10px;
+    border-radius: 0px;
+    border-bottom: 0px;
+    color:cornsilk;
+    font-weight: 200;
+    font-family: arial;
+    font-size: small;
+}
+.ag-s .card-body {margin-top: -35px !important;}
+
+.ag-s .ta{position: absolute;
+  left: 180px;
+  top: 125px;
+  /* background-color: #ff751a; */
+  opacity: 0.5;
+  color:#d9d9d9!important;}
+.card-queue{padding-right: 4px !important;
+  padding-left: 5px !important;
+  color: #e6e6e6 !important;}
+
+.card-queue .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #002140;
+}
+.card-queue .card-header{padding-bottom: 0px;}
+.card-queue .card-body{padding-top: 0px !important;}
+.dl-title{padding: 10px 0px 20px 10px !important;}
+.dl-chart{}
 .table-heading{
   color: #fff;
   background-color: #004280;
@@ -99,7 +139,135 @@ body {
   text-align: center;
 }
 
+.queue-perf th {padding:.9rem 6px .9rem !important;
+  text-align: center;
+  color: #d9d9d9;
+    font-weight: 400;
+    border: none !important;}
+.queue-perf td {padding:.8rem 10px .8rem !important; 
+  text-align: center;
+  font-weight: 100;
+border: none !important;}
+.call-monthly-chart{padding-left: 0px !important;}
 .card-customize .card-body{
   padding: 0em;
 }
 .card-header{color: #fff;}
+
+.cc-calls-stats {
+  width: 47%;
+  float: left;
+  margin: 5px;
+  background-color: #001a33;
+  text-align: center;
+  color: #e6e6e6;
+  border-radius: 0.25rem;
+  margin-bottom: 10px;;
+}
+.cc-calls-stats-bg{background-color:#003566 !important;}
+.cc-calls-stats .text{
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 400;
+  padding-top: 20px;}
+.cc-calls-stats .number{
+  font-size: 42px;
+  margin-top: -8px;
+  padding-bottom: 5px;
+}
+.cc-calls-stats .queue{color: #ffad33 !important;}
+.cc-calls-stats .abnd{color: #ff3333 !important;}
+.cc-calls-time {
+  width: 47%;
+  float: left;
+  margin: 5px;
+  background-color: #001a33;
+  text-align: center;
+  color: #e6e6e6;
+  border-radius: 0.25rem;
+}
+.cc-calls-stats-bg{background-color:#003566 !important;}
+.cc-calls-time .text{
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 400;
+  padding-top: 5px;
+  color: #e6e6e6;}
+
+.cc-calls-time .number{
+  font-size: 42px;
+  margin-top: -8px;
+  padding-bottom: 20px;
+}
+.icon-time {padding-top: 25px;}
+.cc-calls-stats-row .col-md-4 {padding-right: 0px !important;
+  padding-left: 0px !important;}
+  .margin-top-dashboard{
+    margin: 130px;}
+    .margin-top-time{margin-top: -85px;}
+    .mt-5{margin-top: 10px !important;}
+.navbar-brand img{width: 60px !important;}
+.navbar-brand {
+  font-size: 18px;
+  padding: 0px;
+  color: #d9d9d9 !important;}
+.navbar .pad-top{padding-top: 6px;}
+.navbar {
+  box-shadow: none !important;
+  padding: 0.5rem 2rem !important;
+}
+.nav-link {
+  color: #d9d9d9 !important;}
+.greeting{color: #8c8c8c;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: 100 !important;}
+  .welcome{    font-size: 34px;}
+
+
+.classic-tabs{width: 50% !important;}
+.classic-tabs ul{float:right;}
+  .classic-tabs .nav.tabs-cyan li a.active {
+    border-color: #1081b6;
+}
+
+.classic-tabs .nav li a.active {
+    color: #fff;
+    border-bottom: 3px solid;
+}
+.classic-tabs .nav li a {
+    display: block;
+    padding: 08px 24px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+a.waves-effect, a.waves-light {
+    display: inline-block;
+}
+.waves-effect {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.cdr .table-hover tbody tr:hover td {background-color: teal !important;}
+.cdr-t table tr td, .cdr-t table tr th{background-color:teal !important;}
+.table-hover tbody tr:hover td {color: cornsilk !important;}
+.cdr {background-color: teal;}
+.cdr table.cdr-t{background-color: teal;}
+.cdr .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: teal;
+}
+.md-form label{color: #d9d9d9;}
+.md-form label.active{
+  color: #d9d9d9 !important;
+}
+.md-form input.form-control{border-bottom:1px solid #d9d9d9;}
+.form-control {color: cornsilk !important}; 

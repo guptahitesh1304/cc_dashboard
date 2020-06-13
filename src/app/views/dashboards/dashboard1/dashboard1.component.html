@@ -1,3 +1,4 @@
+
 <!-- Heading -->
 <!--mdb-card class="mb-4 wow fadeIn">
 
@@ -23,140 +24,311 @@
 
 </mdb-card-->
 <!-- Heading -->
-
-
-<!--app-stats-card></app-stats-card-->
-<app-stats-card2></app-stats-card2>
-<!--Grid row-->
-<div class="row wow fadeIn mt-5">
-
+<div class="row wow fadeIn cc-calls-stats-row">
     <!--Grid column-->
-    <div class="col-md-6 mb-4 card-customize">
-
-        <!--Card-->
-        <mdb-card>
-            <div class="table-heading">Table heading here</div>
-            <!--Card content-->
-            <mdb-card-body>
-
-                <!-- Table  -->
-                <table class="table table-hover">
-                    <!-- Table head -->
-                    <thead class="">
-                    <tr>
-                        <th>#</th>
-                        <th>Lorem</th>
-                        <th>Ipsum</th>
-                        <th>Dolor</th>
-                    </tr>
-                    </thead>
-                    <!-- Table head -->
-
-                    <!-- Table body -->
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Cell 1</td>
-                        <td>Cell 2</td>
-                        <td>Cell 3</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Cell 4</td>
-                        <td>Cell 5</td>
-                        <td>Cell 6</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Cell 7</td>
-                        <td>Cell 8</td>
-                        <td>Cell 9</td>
-                    </tr>
-                    </tbody>
-                    <!-- Table body -->
-                </table>
-                <!-- Table  -->
-
-            </mdb-card-body>
-
-        </mdb-card>
+    
+    <div class="col-md-4 mb-4">
+        <!--div class="greeting"> <div class="float-left welcome">
+            <span>Welcome and Good Morning.</span>
+            </div>
+        <div class="float-left">
+            Have a nice day ahead !
+        </div></div>
+        <div class="margin-top-dashboard"></div-->
+            <div>
+                <div class="cc-calls-stats">
+                    <div class="text">Call Recieved</div>
+                    <div class="number blue-text">
+                        <strong>981</strong>
+                    </div>
+                </div>
+                <div class="cc-calls-stats">
+                    <div class="text">Call Answered</div>
+                    <div class="number light-blue-text">
+                        <strong>942</strong>
+                    </div>
+                </div>
+            </div>
+    
+        <div>
+            <div class="cc-calls-stats">
+                <div class="text">Inbound</div>
+                <div class="number">
+                    <strong>445</strong>
+                </div>
+            </div>
+            <div class="cc-calls-stats">
+                <div class="text">Outbound</div>
+                <div class="number">
+                    <strong>536</strong>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="cc-calls-stats">
+                <div class="text">Calls in Queue</div>
+                <div class="number queue">
+                    <strong>23</strong>
+                </div>
+            </div>
+            <div class="cc-calls-stats">
+                <div class="text">Calls Abandoned</div>
+                <div class="number abnd">
+                    <strong>16</strong>
+                </div>
+            </div>
+        </div>
+    
+    
         <!--/.Card-->
-
     </div>
-    <!--Grid column-->
 
+<!--Card-->
+<div class="col-lg-4 col-md-12 mb-4 card-customize card-queue">
+
+    <!--Card-->
+    <mdb-card>
+        
+        <div class="view view-cascade gradient-card-header blue-gradient">
+            <div class="card-header-title mb-2">Queue Performance</div>
+    
+          </div>
+        <!--Card content-->
+        <mdb-card-body>
+
+            <!-- Table  -->
+            <table mdbTable hover="false" striped="true" responsive="true" class="table table-striped queue-perf">
+                <thead class="">
+                <tr>
+                    <th>Queue</th>
+                    <th>Waiting</th>
+                    <th>Agents</th>
+                    <th>AWT</th>
+                    <th>ATT</th>
+                    <th>ABND</th>
+                    <th>Total</th>
+                    <th>SL</th>
+                </tr>
+                </thead>
+                
+                <tbody>
+                <tr>
+                    
+                    <td>501</td>
+                    <td>0</td>
+                    <td>12</td>
+                    <td class="red-text"><i class="fas fa-arrow-up red-text"></i>11.2</td>
+                    <td>3.3</td>
+                    <td>5</td>
+                    <td>5/50</td>
+                    <td>90%</td>
+                </tr>
+                <tr>
+                    
+                    <td>502</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>3.45</td>
+                    <td>6.34</td>
+                    <td>8</td>
+                    <td>8/40</td>
+                    <td class="red-text"><i class="fas fa-arrow-down red-text"></i>80%</td>
+                </tr>
+                <tr>
+                    
+                    <td>503</td>
+                    <td>5</td>
+                    <td>22</td>
+                    <td>2.22</td>
+                    <td>3.45</td>
+                    <td>3</td>
+                    <td>3/45</td>
+                    <td>94%</td>
+                </tr>
+                  <tr>  
+                <td>504</td>
+                <td class="red-text"><i class="fas fa-arrow-up red-text"></i>15</td>
+                <td>6</td>
+                <td>9</td>
+                <td>4.44</td>
+                <td>1</td>
+                <td>1/40</td>
+                <td>99%</td>
+            </tr>
+                </tbody>
+            </table>
+            <!-- Table  -->
+
+        </mdb-card-body>
+
+    </mdb-card>
+    <!--/.Card-->
+
+</div>
+<!--Grid column-->
     <!--Grid column-->
-     <!--Grid column-->
-     <div class="col-lg-4 col-md-12 mb-4">
+    <div class="col-lg-4 col-md-12 mb-4 ag-s">
 
         <!--Card-->
-        <mdb-card>
+        <mdb-card class="mb-2">
 
             <!-- Card header -->
-            <div class="card-header">Line chart</div>
+            <div class="card-header">Agent Status</div>
 
             <!--Card content-->
             <mdb-card-body>
-
-                <div style="display: block">
-                    <canvas mdbChart [chartType]="chart3Type" [datasets]="chartDatasets" [labels]="chartLabels"
-                            [colors]="chartColors" [options]="chartOptions"
+                    <div class="ta">
+                        <div>
+                            <h1>
+                            <strong>195</strong></h1></div>
+                      </div>
+                    <div style="display: inline-block;height: 300px;margin-left: auto;margin-right: auto;width: 100%;">
+                    <canvas mdbChart [chartType]="chart5Type" [datasets]="doughnutChartData" [labels]="doughnutChartLabels"
+                            [colors]="doughnutChartColors" [options]="doughnutChartOptions"
                             [legend]="true">
                     </canvas>
-                </div>
+                    </div>
+             
             </mdb-card-body>
 
         </mdb-card>
         <!--/.Card-->
 
     </div>
+    <!--Grid column-->
+
+
+
+</div>
+
+<!--app-stats-card></app-stats-card>
+<app-stats-card2></app-stats-card2-->
+
+<!--Grid column-->
+<!--Grid row-->
+
+  
+    <div class="row wow fadeIn cc-calls-stats-row">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 call-monthly-chart">
+
+            <!--Card-->
+            <mdb-card>
+    
+                 <!-- Card header -->
+                <div class="view view-cascade gradient-card-header blue-gradient">
+                    <div class="card-header-title mb-2">Call Recieved / Answered / Abandoned</div>
+            
+                  </div>
+                <!--Card content-->
+                <mdb-card-body>
+    
+                    <div style="display: block;">
+                        <canvas mdbChart [chartType]="chart1Type" [datasets]="chartDatasets" [labels]="chartLabels"
+                                [colors]="chartColors" [options]="chartOptions"
+                                [legend]="true">
+                        </canvas>
+                    </div>
+                </mdb-card-body>
+    
+            </mdb-card>
+            <!--/.Card-->
+    
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="margin-top-time"></div>
+        
+            <div>
+                <div class="cc-calls-time">
+                    <div class="icon-time">
+                        <mdb-icon fas icon="stopwatch" size="3x" class="blue-text" aria-hidden="true">
+                    </mdb-icon></div>
+                    <div class="text">Average Talk Time</div>
+                    <div class="number blue-text">
+                        <strong>4:32</strong>
+                    </div>
+                </div>
+                <div class="cc-calls-time">
+                    <div class="icon-time">
+                        <mdb-icon fas icon="stopwatch" size="3x" class="light-blue-text" aria-hidden="true">
+                    </mdb-icon></div>
+                    <div class="text">Longest Talk Time</div>
+                    <div class="number light-blue-text">
+                        <strong>7:44</strong>
+                    </div>
+                </div>
+                <div class="cc-calls-time">
+                    <div class="icon-time">
+                        <mdb-icon fas icon="stopwatch" size="3x" class="orange-text" aria-hidden="true">
+                    </mdb-icon></div>
+                    <div class="text">Average Wait Time</div>
+                    <div class="number orange-text">
+                        <strong>2:02</strong>
+                    </div>
+                </div>
+                <div class="cc-calls-time">
+                    <div class="icon-time">
+                        <mdb-icon fas icon="stopwatch" size="3x" class="amber-text" aria-hidden="true">
+                    </mdb-icon></div>
+                    <div class="text">Longest Wait Time</div>
+                    <div class="number amber-text">
+                        <strong>4:22</strong>
+                    </div>
+                </div>
+              
+            </div>
+            <div>
+               
+               
+            </div>
+        
+        
+            <!--/.Card-->
+        </div>
+     <!--Grid column-->
+     <!--div class="col-lg-4 col-md-12 mb-4"-->
+        
+        <div class="col-lg-4 col-md-12 mb-4 dl-chart">
+            <mdb-card>
+        
+                <!--div class="card-header dl-title">DAILY CALL - HOURLY</div-->
+                <div class="view view-cascade gradient-card-header blue-gradient">
+                    <div class="card-header-title mb-2">Daily Call - Hourly</div>
+            
+                  </div>
+                
+                <!--Card content-->
+                <mdb-card-body>
+        
+                    <div style="display: block;">
+                        <canvas mdbChart [chartType]="chart3Type" [datasets]="DailyCallChartDatasets" [labels]="DailyCallChartLabels"
+                                [colors]="DailyCallsChartColors" [options]="DailyCallsChartOptions"
+                                [legend]="true">
+                        </canvas>
+                    </div>
+                </mdb-card-body>
+        
+            </mdb-card>
+        <!--/.Card-->
+        
+        </div>
     <!--Grid column-->
 
 </div>
-<!--Grid row-->
 
 <!--Grid row-->
-<div class="row wow fadeIn mt-5">
 
-    <!--Grid column-->
-    <div class="col-lg-4 col-md-12 mb-4">
+<!--Grid row-->
+<!--div class="row wow fadeIn mt-5">
 
-        <!--Card-->
-        <mdb-card>
-
-             <!-- Card header -->
-             <div class="card-header">
-                CALL RECIEVED/ANSWERED/ABANDONED
-            </div>
-            <!--Card content-->
-            <mdb-card-body>
-
-                <div style="display: block">
-                    <canvas mdbChart [chartType]="chart1Type" [datasets]="chartDatasets" [labels]="chartLabels"
-                            [colors]="chartColors" [options]="chartOptions"
-                            [legend]="true">
-                    </canvas>
-                </div>
-            </mdb-card-body>
-
-        </mdb-card>
-        <!--/.Card-->
-
-    </div>
-    <!--Grid column-->
-
-    <!--Grid column-->
     <div class="col-md-3 mb-4">
 
-        <!--Card-->
         <mdb-card class="mb-4">
 
-            <!-- Card header -->
             <div class="card-header text-center">
                 Pie chart
             </div>
 
-            <!--Card content-->
             <mdb-card-body>
 
                 <div style="display: block">
@@ -168,15 +340,12 @@
             </mdb-card-body>
 
         </mdb-card>
-        <!--/.Card-->
-
-        <!--Card-->
+       
         <mdb-card class="mb-4">
 
-            <!--Card content-->
             <mdb-card-body>
 
-                <!-- List group links -->
+                
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action waves-effect">Sales
                         <mdb-badge success="true" pill="true" class="pull-right">22%
@@ -197,35 +366,29 @@
                     <a class="list-group-item list-group-item-action waves-effect">Messages
                         <mdb-badge primary="true" pill="true" class="pull-right">8</mdb-badge>
                     </a>
-                </div>
-                <!-- List group links -->
+                
 
             </mdb-card-body>
 
         </mdb-card>
-        <!--/.Card-->
+       
 
     </div>
-    <!--Grid column-->
+   
 
 </div>
-<!--Grid row-->
 
-
-
-<!--Grid row-->
 <div class="row wow fadeIn">
 
-    <!--Grid column-->
     <div class="col-lg-4 col-md-12 mb-4">
 
-        <!--Card-->
+  
         <mdb-card>
 
-            <!-- Card header -->
+          
             <div class="card-header">Line chart</div>
 
-            <!--Card content-->
+         
             <mdb-card-body>
 
                 <div style="display: block">
@@ -237,21 +400,16 @@
             </mdb-card-body>
 
         </mdb-card>
-        <!--/.Card-->
+       
 
     </div>
-    <!--Grid column-->
-
-    <!--Grid column-->
+    
     <div class="col-lg-4 col-md-6 mb-4">
 
-        <!--Card-->
         <mdb-card>
 
-            <!-- Card header -->
             <div class="card-header">Radar Chart</div>
 
-            <!--Card content-->
             <mdb-card-body>
 
                 <div style="display: block">
@@ -263,21 +421,16 @@
             </mdb-card-body>
 
         </mdb-card>
-        <!--/.Card-->
 
     </div>
-    <!--Grid column-->
-
-    <!--Grid column-->
+    
     <div class="col-lg-4 col-md-6 mb-4">
 
-        <!--Card-->
+        
         <mdb-card>
 
-            <!-- Card header -->
             <div class="card-header">Doughnut Chart</div>
 
-            <!--Card content-->
             <mdb-card-body>
 
                 <div style="display: block">
@@ -289,15 +442,13 @@
             </mdb-card-body>
 
         </mdb-card>
-        <!--/.Card-->
+   
 
     </div>
-    <!--Grid column-->
+  
 
-</div>
-<!--Grid row-->
+</div-->
 
-<!--Grid row-->
 <!--div class="row wow fadeIn">
 
     <div class="col-md-6 mb-4">

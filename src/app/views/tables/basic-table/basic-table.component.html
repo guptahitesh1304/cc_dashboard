@@ -1,178 +1,76 @@
-<div class="row mt-5">
-    <div class="col-md-12">
-        <!--Card-->
-        <mdb-card cascade="true" narrower="true" class="mt-5">
-            <!--Card image-->
-            <div class="view gradient-card-header blue darken-2">
-                <h4 class="h4-responsive text-white">Basic tables </h4>
-            </div>
-            <!--/Card image-->
-            <!--Card content-->
-            <mdb-card-body>
-
-                <h3 class="mt-5 text-left"><strong>Basic examples</strong></h3>
-                <p>Using the most basic table markup, here’s how .table-based tables look in Bootstrap. All table styles
-                    are
-                    inherited in Bootstrap 4, meaning any nested tables will be styled in the same manner as the
-                    parent.</p>
-
-
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-                <h3 class="mt-5 text-left"><strong>Table head options</strong></h3>
-                <p>To change a background-color of thead (or any other element) use our color classes. If you are going
-                    to use
-                    a dark background you should also consider white text (to provide a proper contrast) by adding
-                    .text-white
-                    class.
-                </p>
-
-
-                <!--Table-->
-                <table class="table">
-
-                    <!--Table head-->
-                    <thead class="blue-grey lighten-4">
-                    <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                    </tr>
-                    </thead>
-                    <!--Table head-->
-
-                    <!--Table body-->
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    </tbody>
-                    <!--Table body-->
-                </table>
-                <!--Table-->
-
-                <!--Table-->
-                <table class="table">
-
-                    <!--Table head-->
-                    <thead class="mdb-color darken-3">
-                    <tr class="text-white">
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                    </tr>
-                    </thead>
-                    <!--Table head-->
-
-                    <!--Table body-->
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    </tbody>
-                    <!--Table body-->
-                </table>
-                <!--Table-->
-
-
-                <h3 class="mt-5 text-left"><strong>Striped rows:</strong></h3>
-
-
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-            </mdb-card-body>
-            <!--/.Card content-->
-        </mdb-card>
-        <!--/.Card-->
+<!--div class="container">
+    <div class="row">
+        <div class="md-form">
+            <input
+              type="text"
+              [(ngModel)]="searchText"
+              class="form-control"
+              id="search"
+              mdbInput
+            />
+            <label for="search">Search</label>
+          </div>
+        <table mdbTable responsive="true" class="z-depth-1">
+            <thead>
+            <tr>
+              <th [mdbTableSort]="elements" sortBy="id"><mdb-icon fas icon="sort"></mdb-icon>ID</th>
+              <th [mdbTableSort]="elements" sortBy="first"><mdb-icon fas icon="sort"></mdb-icon>First</th>
+              <th [mdbTableSort]="elements" sortBy="last"><mdb-icon fas icon="sort"></mdb-icon>Last</th>
+              <th [mdbTableSort]="elements" sortBy="handle"><mdb-icon fas icon="sort"></mdb-icon>Handle</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let el of elements; let i = index">
+                  <th *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex"
+                      scope="row">{{el.id}}</th>
+                  <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.first}}</td>
+                  <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.last}}</td>
+                  <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.handle}}</td>
+                </tr>
+                </tbody>
+                <tfoot class="grey lighten-5 w-100">
+                <tr>
+                  <td colspan="4">
+                    <mdb-table-pagination [tableEl]="tableEl" [searchDataSource]="elements"></mdb-table-pagination>
+                  </td>
+                </tr>
+                </tfoot>
+              </table>
     </div>
-</div>
+  </div-->
+  <div class="container">
+    <div class="row cdr">
+      <div class="col-md-6 mx-auto">
+        <div class="md-form">
+          <input type="text" class="form-control" [(ngModel)]="searchText" (keyup)="searchItems()" id="search-input"
+                 mdbInput>
+          <label for="search-input">Search</label>
+        </div>
+      </div>
+      
+      <table mdbTable #tableEl="mdbTable" stickyHeader="true" hover="false" striped="true" class="z-depth-1" class="cdr-t"> 
+        <thead class="sticky-top">
+        <tr>
+          <th *ngFor="let head of headElements; let i = index" [mdbTableSort]="elements" [sortBy]="headElements[i]"
+              scope="col">{{head | titlecase}} <mdb-icon fas icon="sort"></mdb-icon>
+          </th>
+        </tr>
+        </thead>
+        <tbody #row>
+        <tr mdbTableCol (rowCreated)="onRowCreate($event)" (rowRemoved)="onRowRemove($event)" *ngFor="let el of elements; let i = index">
+          <th *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex" scope="row">{{el.id}}</th>
+          <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex" class="">{{el.first}}</td>
+          <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.last}}</td>
+          <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.handle}}</td>
+        </tr>
+        </tbody>
+        <tfoot class="grey lighten-5 w-100">
+        <tr>
+          <td colspan="4">
+            <mdb-table-pagination [tableEl]="tableEl" paginationAlign="" [searchDataSource]="elements"></mdb-table-pagination>
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>

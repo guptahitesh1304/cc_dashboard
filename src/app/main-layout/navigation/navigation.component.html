@@ -2,7 +2,7 @@
 <header>
 
     <!-- Sidebar -->
-    <div class="sidebar-fixed position-fixed" mdbCollapse #test="bs-collapse">
+    <!--div class="sidebar-fixed position-fixed" mdbCollapse #test="bs-collapse">
 
         <a class="logo-wrapper waves-effect">
             <img src="../../../../assets/img/angular-mdb.png" class="img-fluid" alt="">
@@ -24,35 +24,64 @@
 
         </div>
 
-    </div>
+    </div-->
     <!-- Sidebar -->
 
     <!--Navbar-->
     <!--Navbar-->
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark" [containerInside]="false">
 
-    <a (click)="test.toggle()" mdbBtn color="primary" class="p-3 button-collapse"><mdb-icon fas icon="bars"></mdb-icon></a>
-
+    <!--a (click)="test.toggle()" mdbBtn color="primary" class="p-3 button-collapse"><mdb-icon fas icon="bars"></mdb-icon></a-->
 
     <!-- Navbar brand -->
-    <mdb-navbar-brand><a class="navbar-brand" href="#">Dashboard</a></mdb-navbar-brand>
+    <mdb-navbar-brand>
+        <div class="float-left">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/Vodia_White_Banner.png" class="rounded float-left" alt="...">
+            </a>
+        </div>
+    <div class="float-left pad-top"><a class="navbar-brand" href="#">Contact Center Dashboard</a>
+    </div>
+</mdb-navbar-brand>
   
+<div class="classic-tabs">
+
+    <ul class="nav tabs-cyan" id="myClassicTab" role="tablist">
+        <li class="nav-item">
+          <a (click)="onClick(1)"   [ngClass]="{'active': tab==='tab1'}" class="nav-link  waves-light active show" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
+            role="tab" aria-controls="profile-classic" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="onClick(2)"   [ngClass]="{'active': tab==='tab2'}" class="nav-link waves-light" id="follow-tab-classic" data-toggle="tab" routerLink="tables/table1" role="tab"
+            aria-controls="follow-classic" aria-selected="false">Call Reporting</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="onClick(3)"   [ngClass]="{'active': tab==='tab3'}" class="nav-link waves-light" id="contact-tab-classic" data-toggle="tab" routerLink="tables/table1" role="tab"
+            aria-controls="contact-classic" aria-selected="false">Analytics</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="onClick(4)"   [ngClass]="{'active': tab==='tab4'}" class="nav-link waves-light" id="awesome-tab-classic" data-toggle="tab" routerLink="tables/table1" role="tab"
+            aria-controls="awesome-classic" aria-selected="false">SOA</a>
+        </li>
+      </ul>
+    
+    </div>
     <!-- Collapsible content -->
-    <links>
+    <links class="float-right">
   
       <!-- Links -->
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="envelope"></mdb-icon> Contact<span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="envelope"></mdb-icon> <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="cog"></mdb-icon> Settings</a>
+          <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="cog"></mdb-icon></a>
         </li>
   
         <!-- Dropdown -->
         <li class="nav-item dropdown" dropdown>
           <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-            <mdb-icon fas icon="user"></mdb-icon> Profile<span class="caret"></span></a>
+            <mdb-icon fas icon="user"></mdb-icon> <span class="caret"></span></a>
           <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
             <a class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
             <a class="dropdown-item waves-light" mdbWavesEffect href="#">Log out</a>

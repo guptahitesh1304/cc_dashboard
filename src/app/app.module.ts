@@ -12,6 +12,7 @@ import { SharedModule } from './shared/shared.module';
 import { ErrorModule } from './views/errors/error.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
+
 // main layout
 import { NavigationModule } from './main-layout/navigation/navigation.module';
 
