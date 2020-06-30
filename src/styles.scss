@@ -1,12 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-color:#0b2a4b !important;
+  //background-color:#0b2a4b !important;
+  background-color:#f8f9fc !important;
   font-family: arial !important;
-  color: cornsilk !important;
+  //color: cornsilk !important;86869a
+  color: #858796 !important;
 }
 
-header{background-color: #0b2a4b !important;}
+header{background-color: #2196f3 !important;}
 .card.card-cascade .view.gradient-card-header {
   padding: 1rem 1rem;
   text-align: center;
@@ -82,51 +84,61 @@ header{background-color: #0b2a4b !important;}
   margin-right: -60px;
 }
 .table{
-  color: #d9d9d9 !important;
+  //color: #d9d9d9 !important;
+  color: #5b5b6a !important;
 }
+table.table thead th {color: #fff;}
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #001a33;
+  //background-color: #001a33
+  background-color: #ffffff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
 .blue-gradient {
-  background: linear-gradient(40deg, #00254d, #001933) !important;
+  background: linear-gradient(40deg, #f8f9fc, #f8f9fc) !important;
 }
 
 .card-header-title{padding-top: 10px;
   padding-left: 10px;
   font-size: 14px;
-  color: cornsilk;}
+  //color: cornsilk
+  color: #5466e2;
+  font-weight: bold;
+  }
 .cc-calls-stats-row .card-body{padding-top: 10px !important;}
 .card-queue .card-header, .cc-calls-stats-row .card-header{
   padding: 10px 0px 10px 10px;
     border-radius: 0px;
     border-bottom: 0px;
-    color:cornsilk;
+    //color:cornsilk;f8f9fc
+    color:#5466e2;
     font-weight: 200;
     font-family: arial;
     font-size: small;
+    font-weight: bold;
 }
-.ag-s .card-body {margin-top: -35px !important;}
+.ag-s .card-body {margin-top: -35px !important; padding-bottom: 10px;}
+.ag-s .card-header {margin-bottom: 10px;}
 
 .ag-s .ta{position: absolute;
   left: 180px;
-  top: 125px;
+  top: 140px;
   /* background-color: #ff751a; */
   opacity: 0.5;
-  color:#d9d9d9!important;}
+  color:#5b5b6a !important;}
 .card-queue{padding-right: 4px !important;
   padding-left: 5px !important;
   color: #e6e6e6 !important;}
 
 .card-queue .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #002140;
+  //background-color: #002140;f8f9fc
+  background-color: #f8f9fc;
 }
 .card-queue .card-header{padding-bottom: 0px;}
 .card-queue .card-body{padding-top: 0px !important;}
@@ -139,32 +151,47 @@ header{background-color: #0b2a4b !important;}
   text-align: center;
 }
 
-.queue-perf th {padding:.9rem 6px .9rem !important;
+.cc-calls-stats-row table thead {background-color: #03a9f4;}
+.queue-perf th {padding:.9rem 7px .9rem !important;
   text-align: center;
-  color: #d9d9d9;
+  //color: #d9d9d9;
+  color: #5b5b6a;
     font-weight: 400;
-    border: none !important;}
-.queue-perf td {padding:.8rem 10px .8rem !important; 
+    //border: none !important;
+  }
+.queue-perf td {padding:.7rem 10px .7rem !important; 
   text-align: center;
   font-weight: 100;
-border: none !important;}
+//border: none !important;
+}
 .call-monthly-chart{padding-left: 0px !important;}
 .card-customize .card-body{
   padding: 0em;
 }
 .card-header{color: #fff;}
 
+.blc-1{  border-left: 5px solid #2196f3;color: #2196f3 !important;}
+.blc-2{  border-left: 5px solid #03a9f4;color: #03a9f4 !important; }
+.blc-3{  border-left: 5px solid #1bd490;color: #1cc88a !important; }
+.blc-4{  border-left: 5px solid #1cc88a;color: #1bd490 !important; }
+.blc-5{  border-left: 5px solid #ffad33;color: #ffad33 !important;}
+.blc-6{  border-left: 5px solid #ff3333;color: #ff3333 !important;}
 .cc-calls-stats {
   width: 47%;
   float: left;
   margin: 5px;
-  background-color: #001a33;
+  //background-color: #001a33;
+  background-color: #ffffff;
   text-align: center;
   color: #e6e6e6;
   border-radius: 0.25rem;
-  margin-bottom: 10px;;
+  margin-bottom: 10px;
+  //border-left: 5px solid;
 }
-.cc-calls-stats-bg{background-color:#003566 !important;}
+.cc-calls-stats-bg{
+  //background-color:#003566 !important;
+  background-color:#ffffff !important;
+}
 .cc-calls-stats .text{
   font-size: 14px;
   font-family: sans-serif;
@@ -177,27 +204,39 @@ border: none !important;}
 }
 .cc-calls-stats .queue{color: #ffad33 !important;}
 .cc-calls-stats .abnd{color: #ff3333 !important;}
+.cct-bg-1{background-color: #2196f3 !important;}
+.cct-bg-2{background-color: #03a9f4 !important;}
+.cct-bg-3{background-color: #1cc88a !important;}
+.cct-bg-4{//background-color: #008080d1 !important;
+  background-color: #1bd490 !important;}
 .cc-calls-time {
   width: 47%;
   float: left;
   margin: 5px;
-  background-color: #001a33;
+  //background-color: #001a33;
+  //background-color: #ffffff;
   text-align: center;
   color: #e6e6e6;
   border-radius: 0.25rem;
 }
-.cc-calls-stats-bg{background-color:#003566 !important;}
+.cc-calls-stats-bg{
+  //background-color:#003566 !important;
+  background-color:#ffffff !important;
+}
 .cc-calls-time .text{
   font-size: 14px;
   font-family: sans-serif;
   font-weight: 400;
   padding-top: 5px;
-  color: #e6e6e6;}
+  color: #fff;
+  //color: #5b5b6a;
+}
 
 .cc-calls-time .number{
   font-size: 42px;
   margin-top: -8px;
   padding-bottom: 20px;
+  color: #fff;
 }
 .icon-time {padding-top: 25px;}
 .cc-calls-stats-row .col-md-4 {padding-right: 0px !important;
@@ -210,14 +249,16 @@ border: none !important;}
 .navbar-brand {
   font-size: 18px;
   padding: 0px;
-  color: #d9d9d9 !important;}
+  //color: #d9d9d9 !important;
+  color: #fff !important;
+}
 .navbar .pad-top{padding-top: 6px;}
 .navbar {
   box-shadow: none !important;
   padding: 0.5rem 2rem !important;
 }
 .nav-link {
-  color: #d9d9d9 !important;}
+  color: #fff !important;}
 .greeting{color: #8c8c8c;
   font-family: Arial, Helvetica, sans-serif !important;
   font-weight: 100 !important;}
@@ -227,7 +268,8 @@ border: none !important;}
 .classic-tabs{width: 50% !important;}
 .classic-tabs ul{float:right;}
   .classic-tabs .nav.tabs-cyan li a.active {
-    border-color: #1081b6;
+    //border-color: #1081b6;
+    border-color: #fff;
 }
 
 .classic-tabs .nav li a.active {
@@ -257,13 +299,14 @@ a.waves-effect, a.waves-light {
     -webkit-tap-highlight-color: transparent;
 }
 
-.cdr .table-hover tbody tr:hover td {background-color: teal !important;}
-.cdr-t table tr td, .cdr-t table tr th{background-color:teal !important;}
-.table-hover tbody tr:hover td {color: cornsilk !important;}
-.cdr {background-color: teal;}
-.cdr table.cdr-t{background-color: teal;}
+.cdr .table-hover tbody tr:hover td {background-color: 2196f3 !important;}
+.queue-perf tbody tr:hover td {background-color: #fff !important;}  
+.cdr-t table tr td, .cdr-t table tr th{background-color:2196f3 !important;}
+.table-hover tbody tr:hover td {color: #5b5b6a !important;}
+.cdr {background-color: #fff;}
+.cdr table.cdr-t{background-color: #fff}
 .cdr .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: teal;
+  background-color: #fff;
 }
 .md-form label{color: #d9d9d9;}
 .md-form label.active{
@@ -271,3 +314,4 @@ a.waves-effect, a.waves-light {
 }
 .md-form input.form-control{border-bottom:1px solid #d9d9d9;}
 .form-control {color: cornsilk !important}; 
+.fas {color: #fff !important;}

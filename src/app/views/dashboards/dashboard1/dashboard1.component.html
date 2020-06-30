@@ -36,13 +36,13 @@
         </div></div>
         <div class="margin-top-dashboard"></div-->
             <div>
-                <div class="cc-calls-stats">
+                <div class="cc-calls-stats blc-1">
                     <div class="text">Call Recieved</div>
                     <div class="number blue-text">
                         <strong>981</strong>
                     </div>
                 </div>
-                <div class="cc-calls-stats">
+                <div class="cc-calls-stats blc-2">
                     <div class="text">Call Answered</div>
                     <div class="number light-blue-text">
                         <strong>942</strong>
@@ -51,13 +51,13 @@
             </div>
     
         <div>
-            <div class="cc-calls-stats">
+            <div class="cc-calls-stats blc-3">
                 <div class="text">Inbound</div>
                 <div class="number">
                     <strong>445</strong>
                 </div>
             </div>
-            <div class="cc-calls-stats">
+            <div class="cc-calls-stats blc-4">
                 <div class="text">Outbound</div>
                 <div class="number">
                     <strong>536</strong>
@@ -65,13 +65,13 @@
             </div>
         </div>
         <div>
-            <div class="cc-calls-stats">
+            <div class="cc-calls-stats blc-5">
                 <div class="text">Calls in Queue</div>
                 <div class="number queue">
                     <strong>23</strong>
                 </div>
             </div>
-            <div class="cc-calls-stats">
+            <div class="cc-calls-stats blc-6">
                 <div class="text">Calls Abandoned</div>
                 <div class="number abnd">
                     <strong>16</strong>
@@ -223,7 +223,7 @@
                 <!--Card content-->
                 <mdb-card-body>
     
-                    <div style="display: block;">
+                    <div style="display: block;height: 210px;">
                         <canvas mdbChart [chartType]="chart1Type" [datasets]="chartDatasets" [labels]="chartLabels"
                                 [colors]="chartColors" [options]="chartOptions"
                                 [legend]="true">
@@ -239,39 +239,39 @@
             <div class="margin-top-time"></div>
         
             <div>
-                <div class="cc-calls-time">
+                <div class="cc-calls-time cct-bg-1">
                     <div class="icon-time">
-                        <mdb-icon fas icon="stopwatch" size="3x" class="blue-text" aria-hidden="true">
+                        <mdb-icon fas icon="stopwatch" size="3x" class="" aria-hidden="true">
                     </mdb-icon></div>
                     <div class="text">Average Talk Time</div>
-                    <div class="number blue-text">
+                    <div class="number">
                         <strong>4:32</strong>
                     </div>
                 </div>
-                <div class="cc-calls-time">
+                <div class="cc-calls-time cct-bg-2">
                     <div class="icon-time">
-                        <mdb-icon fas icon="stopwatch" size="3x" class="light-blue-text" aria-hidden="true">
+                        <mdb-icon fas icon="stopwatch" size="3x" class="" aria-hidden="true">
                     </mdb-icon></div>
                     <div class="text">Longest Talk Time</div>
-                    <div class="number light-blue-text">
+                    <div class="number">
                         <strong>7:44</strong>
                     </div>
                 </div>
-                <div class="cc-calls-time">
+                <div class="cc-calls-time cct-bg-3">
                     <div class="icon-time">
-                        <mdb-icon fas icon="stopwatch" size="3x" class="orange-text" aria-hidden="true">
+                        <mdb-icon fas icon="stopwatch" size="3x" class="" aria-hidden="true">
                     </mdb-icon></div>
                     <div class="text">Average Wait Time</div>
-                    <div class="number orange-text">
+                    <div class="number">
                         <strong>2:02</strong>
                     </div>
                 </div>
-                <div class="cc-calls-time">
+                <div class="cc-calls-time cct-bg-4">
                     <div class="icon-time">
-                        <mdb-icon fas icon="stopwatch" size="3x" class="amber-text" aria-hidden="true">
+                        <mdb-icon fas icon="stopwatch" size="3x" class="" aria-hidden="true">
                     </mdb-icon></div>
                     <div class="text">Longest Wait Time</div>
-                    <div class="number amber-text">
+                    <div class="number">
                         <strong>4:22</strong>
                     </div>
                 </div>
@@ -300,7 +300,7 @@
                 <!--Card content-->
                 <mdb-card-body>
         
-                    <div style="display: block;">
+                    <div style="display: block;height: 210px;">
                         <canvas mdbChart [chartType]="chart3Type" [datasets]="DailyCallChartDatasets" [labels]="DailyCallChartLabels"
                                 [colors]="DailyCallsChartColors" [options]="DailyCallsChartOptions"
                                 [legend]="true">

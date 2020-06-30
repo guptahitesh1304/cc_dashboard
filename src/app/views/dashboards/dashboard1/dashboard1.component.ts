@@ -48,19 +48,19 @@ export class Dashboard1Component implements OnInit {
   public DailyCallsChartColors:Array<any> = [
     {
       backgroundColor: '#fff',
-      borderColor: '#0068a2',
+      borderColor: '#2196f3',
       pointBackgroundColor: 'rgb(103, 58, 183)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
+      pointBorderColor: '#2196f3',
+      pointHoverBackgroundColor: '#2196f3',
       pointHoverBorderColor: 'rgba(103, 58, 183, .8)',
       fill: false
     },
     {
       backgroundColor: '#fff',
-      borderColor: '#a7325e',
+      borderColor: '#ff8eaf',
       pointBackgroundColor: 'rgb(103, 58, 183)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
+      pointBorderColor: '#ff8eaf',
+      pointHoverBackgroundColor: '#ff8eaf',
       pointHoverBorderColor: 'rgba(103, 58, 183, .8)',
       fill: false
     }
@@ -75,8 +75,8 @@ export class Dashboard1Component implements OnInit {
   public doughnutChartColors:Array<any> = [{
       hoverBorderColor: ['rgba(0, 0, 0, 0.1)', 'rgba(0, 0, 0, 0.1)', 'rgba(0, 0, 0, 0.1)', 'rgba(0, 0, 0, 0.1)'], 
       hoverBorderWidth: 2, 
-      backgroundColor: ["#0068a2", "#a7325e", "#70ff7d", "#9d873f"], 
-      hoverBackgroundColor: ["#0068a2", "#a7325e", "#70ff7d", "#9d873f"]
+      backgroundColor: ["#2196f3", "#ff8eaf", "#1cc88a", "#ffad33"], 
+      hoverBackgroundColor: ["#2196f3", "#ff8eaf", "#1cc88a", "#ffad33"]
   }];
   public doughnutChartOptions:any = { 
     responsive: true,
@@ -84,15 +84,17 @@ export class Dashboard1Component implements OnInit {
     legend: {
 			position : 'bottom',
 			labels : {
-				fontColor: '#d9d9d9',
+        //fontColor: '#d9d9d9',5b5b6a
+        fontColor: '#5b5b6a',
 				fontSize: 11,
 				usePointStyle : true,
-				padding: 10
+				padding: 5
       }
     },
     pieceLabel: {
 			render: 'percentage',
-			fontColor: '#d9d9d9',
+      //fontColor: '#d9d9d9',
+      fontColor: '#5b5b6a',
       fontSize: 14,
       anchor: 'end',
       position: 'outside',
@@ -106,7 +108,7 @@ export class Dashboard1Component implements OnInit {
     fontSize:14,
     fontColor:'#8c8c8c',
     lineHeight:1,
-    padding:10,
+    padding:2,
     horizontalAlign:screenLeft,
   }
 };
@@ -118,10 +120,11 @@ public DailyCallsChartOptions:any = {
   legend: {
     position : 'bottom',
     labels : {
-      fontColor: '#d9d9d9',
+     // fontColor: '#d9d9d9',
+      fontColor: '#5b5b6a',
       fontSize: 11,
       usePointStyle : true,
-      padding: 20
+      padding: 10
     }
   },
  
@@ -132,12 +135,14 @@ title: {
 scales: {
   yAxes: [{
     ticks: {
-      fontColor: '#d9d9d9',
+      //fontColor: '#d9d9d9',
+      fontColor: '#5b5b6a',
     }
   }],
   xAxes: [{
     ticks: {
-      fontColor: '#d9d9d9',
+      //fontColor: '#d9d9d9',
+      fontColor: '#5b5b6a',
     }
   }]
 }
@@ -153,23 +158,26 @@ scales: {
    legend: {
 			position : 'bottom',
 			labels : {
-				fontColor: '#d9d9d9',
+        //fontColor: '#d9d9d9',
+        fontColor: '#5b5b6a',
 				fontSize: 11,
 				usePointStyle : true,
-				padding: 20
+				padding: 10
       }
     },
     scales: {
       yAxes: [{
         ticks: {
-          fontColor: '#d9d9d9',
+          //fontColor: '#d9d9d9',
+          fontColor: '#5b5b6a',
         }
       }],
       xAxes: [{
         barThickness: 8,  // number (pixels) or 'flex'
         maxBarThickness: 10,
         ticks: {
-          fontColor: '#d9d9d9',
+          //fontColor: '#d9d9d9',
+          fontColor: '#5b5b6a',
         }
       }]
     }
