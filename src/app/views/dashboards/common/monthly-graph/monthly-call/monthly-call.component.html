@@ -1,0 +1,19 @@
+<mdb-card>
+
+    <!-- Card header -->
+    <div class="view view-cascade gradient-card-header blue-gradient">
+        <div class="card-header-title mb-2">Call Recieved / Answered / Abandoned</div>
+
+    </div>
+    <!--Card content-->
+    <mdb-card-body>
+
+        <div style="display: inline-block;height: auto;margin-left: auto;margin-right: auto;width: 100%;"
+            *ngIf="monthlychartDatasets.length > 0">
+            <canvas mdbChart [chartType]="monthlyChartType" [datasets]="monthlychartDatasets" [labels]="monthlychartLabels"
+                [colors]="monthlychartColors" [options]="monthlychartOptions" [legend]="true">
+            </canvas>
+        </div>
+    </mdb-card-body>
+
+</mdb-card>

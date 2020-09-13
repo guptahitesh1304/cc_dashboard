@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body {
   //background-color:#0b2a4b !important;
   background-color:#f8f9fc !important;
@@ -102,6 +104,7 @@ table.table thead th {color: #fff;}
 }
 .blue-gradient {
   background: linear-gradient(40deg, #f8f9fc, #f8f9fc) !important;
+  border-radius: 0.25rem;
 }
 
 .card-header-title{padding-top: 10px;
@@ -127,11 +130,13 @@ table.table thead th {color: #fff;}
 .ag-s .card-header {margin-bottom: 10px;}
 
 .ag-s .ta{position: absolute;
-  left: 180px;
-  top: 140px;
+  left: 200px;
+  top: 150px;
   /* background-color: #ff751a; */
   opacity: 0.5;
   color:#5b5b6a !important;}
+
+  .ag-s .ta .totagent{font-size: 60px;}
 .card-queue{padding-right: 4px !important;
   padding-left: 5px !important;
   color: #e6e6e6 !important;}
@@ -143,7 +148,6 @@ table.table thead th {color: #fff;}
 .card-queue .card-header{padding-bottom: 0px;}
 .card-queue .card-body{padding-top: 0px !important;}
 .dl-title{padding: 10px 0px 20px 10px !important;}
-.dl-chart{}
 .table-heading{
   color: #fff;
   background-color: #004280;
@@ -151,17 +155,21 @@ table.table thead th {color: #fff;}
   text-align: center;
 }
 
+table.queue-perf{
+  display: table !important;
+}
 .cc-calls-stats-row table thead {background-color: #03a9f4;}
-.queue-perf th {padding:.9rem 7px .9rem !important;
+.queue-perf th {padding:.5rem 7px .5rem !important;
   text-align: center;
   //color: #d9d9d9;
   color: #5b5b6a;
     font-weight: 400;
-    //border: none !important;
+    font-size: .83rem !important;
   }
-.queue-perf td {padding:.7rem 10px .7rem !important; 
+.queue-perf td {padding:.1rem 1px .2rem !important; 
   text-align: center;
-  font-weight: 100;
+  font-weight: 700;
+  overflow: Hidden;
 //border: none !important;
 }
 .call-monthly-chart{padding-left: 0px !important;}
@@ -175,7 +183,7 @@ table.table thead th {color: #fff;}
 .blc-3{  border-left: 5px solid #1bd490;color: #1cc88a !important; }
 .blc-4{  border-left: 5px solid #1cc88a;color: #1bd490 !important; }
 .blc-5{  border-left: 5px solid #ffad33;color: #ffad33 !important;}
-.blc-6{  border-left: 5px solid #ff3333;color: #ff3333 !important;}
+.blc-6{  border-left: 5px solid #ff3333ab;color:#ff3333ab !important;}
 .cc-calls-stats {
   width: 47%;
   float: left;
@@ -186,6 +194,7 @@ table.table thead th {color: #fff;}
   color: #e6e6e6;
   border-radius: 0.25rem;
   margin-bottom: 10px;
+  min-height: 90px;
   //border-left: 5px solid;
 }
 .cc-calls-stats-bg{
@@ -194,16 +203,19 @@ table.table thead th {color: #fff;}
 }
 .cc-calls-stats .text{
   font-size: 14px;
-  font-family: sans-serif;
-  font-weight: 400;
-  padding-top: 20px;}
+    font-family: fantasy;
+    font-weight: unset;
+    padding-top: 20px;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+  }
 .cc-calls-stats .number{
   font-size: 42px;
-  margin-top: -8px;
-  padding-bottom: 5px;
+  margin-top: 10px;
+  padding-bottom:30px;
 }
 .cc-calls-stats .queue{color: #ffad33 !important;}
-.cc-calls-stats .abnd{color: #ff3333 !important;}
+.cc-calls-stats .abnd{color: #ff3333ab !important;}
 .cct-bg-1{background-color: #2196f3 !important;}
 .cct-bg-2{background-color: #03a9f4 !important;}
 .cct-bg-3{background-color: #1cc88a !important;}
@@ -218,6 +230,7 @@ table.table thead th {color: #fff;}
   text-align: center;
   color: #e6e6e6;
   border-radius: 0.25rem;
+  min-height: 140px;
 }
 .cc-calls-stats-bg{
   //background-color:#003566 !important;
@@ -234,8 +247,8 @@ table.table thead th {color: #fff;}
 
 .cc-calls-time .number{
   font-size: 42px;
-  margin-top: -8px;
-  padding-bottom: 20px;
+  margin-top: 15px;
+  padding-bottom: 45px;
   color: #fff;
 }
 .icon-time {padding-top: 25px;}
@@ -313,5 +326,83 @@ a.waves-effect, a.waves-light {
   color: #d9d9d9 !important;
 }
 .md-form input.form-control{border-bottom:1px solid #d9d9d9;}
-.form-control {color: cornsilk !important}; 
+//.form-control {color: cornsilk !important}; 
 .fas {color: #fff !important;}
+.highlightRow {
+  background: #ff3333ab!important;
+  color: #fff !important;
+}
+
+.padding-10{padding: 10px;}
+.custom-select{    width: 75% !important;}
+.border-0{border: 0px !important;}
+.domain {margin-top: 0px !important; margin-bottom: 1rem !important;}
+.md-form{margin-bottom: 1.2rem !important;}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+table.mat-table {
+  width: 100% !important;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.main-content {
+  margin-top: 35px;
+  padding: 30px 15px;
+  min-height: calc(100vh - 123px);
+}
+
+.main-content .queue-perf-table-view .card-icon{
+  background: linear-gradient(60deg,#2196f3,#2196f3);
+    border-radius: 3px;
+    background-color: #999;
+    padding: 15px;
+    margin-top: -20px;
+    margin-right: 15px;
+    float: left;
+}
+
+.main-content .queue-perf-table-view .card .card-header.card-header-icon .card-title, .card .card-header.card-header-text .card-title {
+  margin-top: 15px;
+  color: #3c4858;
+  
+}
+.main-content .queue-perf-table-view .card .card-header{
+  border: none;
+  background-color: white;
+}
+
+.queue-perf-table-view .card [class*=card-header-] {
+  margin: 0 15px;
+  padding: 0;
+  position: relative;
+}
+
+.queue-perf-table-view  table thead tr th{
+  border-bottom-width: 1px !important;
+    font-size: 1.0rem !important;
+    font-weight: 500 !important;
+    color: #2196f3;
+}
+
+.mat-sort-header-arrow {
+  color: #2196f3 !important;
+}
+
+.text-primary{
+  color: #2196f3 !important;
+}
+
+footer.page-footer {
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+  color: #fff;
+}
+
+table td {
+  font-weight: 500;
+}

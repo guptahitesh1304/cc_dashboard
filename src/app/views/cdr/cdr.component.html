@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row cdr">
+      <div class="col-md-6 mx-auto">
+        <div class="md-form">
+          <input type="text" class="form-control" [(ngModel)]="searchText" (keyup)="searchItems()" id="search-input"
+                 mdbInput>
+          <label for="search-input">Search</label>
+        </div>
+      </div>
+      
+      <table mdbTable #tableEl="mdbTable" stickyHeader="true" hover="false" striped="true" class="z-depth-1" class="cdr-t"> 
+        <thead class="sticky-top">
+        <tr>
+          <th *ngFor="let head of headElements; let i = index" [mdbTableSort]="elements" [sortBy]="headElements[i]"
+              scope="col">{{head | titlecase}} <mdb-icon fas icon="sort"></mdb-icon>
+          </th>
+        </tr>
+        </thead>
+        <tbody #row>
+                
+                <tr mdbTableCol (rowCreated)="onRowCreate($event)" (rowRemoved)="onRowRemove($event)" *ngFor="let el of elements; let i = index">
+                    <th *ngIf="i >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex" scope="row">{{el.userId}}</th>
+                    <td *ngIf="i >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex" class="red-text">{{el.id}}</td>
+                    <td *ngIf="i >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.title}}</td>
+                    
+                  </tr> 
+                  <!-- <tr mdbTableCol (rowCreated)="onRowCreate($event)" (rowRemoved)="onRowRemove($event)" *ngFor="let el of elements;">
+                    <th  scope="row">{{el.id}}</th>
+                    <td  class="red-text">{{el.name}}</td>
+                    <td>{{el.email}}</td>
+                    <td>{{el.username}}</td>
+                  </tr> -->
+        <!--tr *ngFor="let queuesDetail of elements" [ngClass]="{'highlightRow' : queuesDetail.callsInWaiting > 3}">
+          <td>{{queuesDetail.name}}</td>
+          <td>{{queuesDetail.callsInWaiting}}</td>
+          <td>{{queuesDetail.agentsForQueue}}</td>
+          <td>{{queuesDetail.awt}}</td>
+          <td>{{queuesDetail.aht}}</td>
+          <td>{{queuesDetail.totalAbandonedCalls}}</td>
+          <td>{{queuesDetail.totalAbandonedCalls}}/{{queuesDetail.totalNumberOfCalls}}</td>
+          <td>{{queuesDetail.slinPercentage}}</td>
+      </tr-->
+        </tbody>
+        <tfoot class="grey lighten-5 w-100">
+        <tr>
+          <td colspan="4">
+            <mdb-table-pagination [tableEl]="tableEl" paginationAlign="" [searchDataSource]="elements"></mdb-table-pagination>
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>

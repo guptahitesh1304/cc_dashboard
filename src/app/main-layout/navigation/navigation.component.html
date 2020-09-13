@@ -33,7 +33,7 @@
 
     <!--a (click)="test.toggle()" mdbBtn color="primary" class="p-3 button-collapse"><mdb-icon fas icon="bars"></mdb-icon></a-->
 
-    <!-- Navbar brand -->
+    <!-- Navbar brand --><div>
     <mdb-navbar-brand>
         <div class="float-left">
         <a class="navbar-brand" href="#">
@@ -43,24 +43,25 @@
     <div class="float-left pad-top"><a class="navbar-brand" href="#">Contact Center Dashboard</a>
     </div>
 </mdb-navbar-brand>
+</div>
   
-<div class="classic-tabs">
+<div  class="classic-tabs">
 
-    <ul class="nav tabs-cyan" id="myClassicTab" role="tablist">
+    <ul class="nav tabs-cyan"  id="myClassicTab" role="tablist">
         <li class="nav-item">
-          <a (click)="onClick(1)"   [ngClass]="{'active': tab==='tab1'}" class="nav-link  waves-light active show" id="profile-tab-classic" data-toggle="tab" href="#profile-classic"
+          <a  *ngIf="loginService.isUserLoggedIn()" (click)="onClick(1)"   [ngClass]="{'active': tab==='tab1'}" class="nav-link  waves-light active show" id="profile-tab-classic" data-toggle="tab" href="#"
             role="tab" aria-controls="profile-classic" aria-selected="true">Home</a>
         </li>
         <li class="nav-item">
-          <a (click)="onClick(2)"   [ngClass]="{'active': tab==='tab2'}" class="nav-link waves-light" id="follow-tab-classic" data-toggle="tab" routerLink="tables/table1" role="tab"
-            aria-controls="follow-classic" aria-selected="false">Call Reporting</a>
+    <a  *ngIf="loginService.isUserLoggedIn()" (click)="onClick(2)"   [ngClass]="{'active': tab==='tab2'}" class="nav-link waves-light" id="follow-tab-classic" data-toggle="tab" routerLink="qPerform-table/qPerform" role="tab"
+            aria-controls="follow-classic" aria-selected="false">Q-Performance</a>
         </li>
         <li class="nav-item">
-          <a (click)="onClick(3)"   [ngClass]="{'active': tab==='tab3'}" class="nav-link waves-light" id="contact-tab-classic" data-toggle="tab" routerLink="tables/table1" role="tab"
-            aria-controls="contact-classic" aria-selected="false">Analytics</a>
+          <a *ngIf="loginService.isUserLoggedIn()" (click)="onClick(3)"   [ngClass]="{'active': tab==='tab3'}" class="nav-link waves-light" id="contact-tab-classic" data-toggle="tab" routerLink="cdr-table/cdr" role="tab"
+            aria-controls="contact-classic" aria-selected="false">CDR</a>
         </li>
         <li class="nav-item">
-          <a (click)="onClick(4)"   [ngClass]="{'active': tab==='tab4'}" class="nav-link waves-light" id="awesome-tab-classic" data-toggle="tab" routerLink="tables/table1" role="tab"
+          <a *ngIf="loginService.isUserLoggedIn()" (click)="onClick(4)"   [ngClass]="{'active': tab==='tab4'}" class="nav-link waves-light" id="awesome-tab-classic" data-toggle="tab" routerLink="tables/table1" role="tab"
             aria-controls="awesome-classic" aria-selected="false">SOA</a>
         </li>
       </ul>
@@ -71,20 +72,20 @@
   
       <!-- Links -->
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="envelope"></mdb-icon> <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="cog"></mdb-icon></a>
-        </li>
+        <!-- <li class="nav-item">
+          <a *ngIf="loginService.isUserLoggedIn()" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="envelope"></mdb-icon> <span class="sr-only">(current)</span></a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a *ngIf="loginService.isUserLoggedIn()" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="cog"></mdb-icon></a>
+        </li> -->
   
         <!-- Dropdown -->
         <li class="nav-item dropdown" dropdown>
-          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <a *ngIf="loginService.isUserLoggedIn()" dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
             <mdb-icon fas icon="user"></mdb-icon> <span class="caret"></span></a>
           <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Log out</a>
+            <a *ngIf="loginService.isUserLoggedIn()" class="dropdown-item waves-light"   mdbWavesEffect routerLink="tables/table1">My account</a>
+            <a  *ngIf="loginService.isUserLoggedIn()" class="dropdown-item waves-light"  mdbWavesEffect routerLink="/logout">Log out</a>
           </div>
         </li>
   

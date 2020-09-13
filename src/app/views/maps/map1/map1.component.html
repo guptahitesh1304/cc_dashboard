@@ -1,101 +1,71 @@
-<div class="row">
-    <div class="col-md-6">
-        <!--Card-->
-        <mdb-card cascade="true" narrower="true" class="mt-5">
-
-            <!--Card image-->
-            <div class="view gradient-card-header blue darken-2 ">
-                <h4 class="h4-responsive text-white">Regular map</h4>
-            </div>
-            <!--/Card image-->
-
-            <!--Card content-->
-            <mdb-card-body class="text-center">
-                <agm-map [latitude]="map.lat" [longitude]="map.lng" [mapTypeId]="'roadmap'" style="height: 300px">
-                    <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
-                </agm-map>
-
-            </mdb-card-body>
-            <!--/.Card content-->
-        </mdb-card>
-        <!--/.Card-->
-    </div>
-    <div class="col-md-6">
-        <!--Card-->
-        <mdb-card cascade="true" narrower="true" class="mt-5">
-
-            <!--Card image-->
-            <div class="view gradient-card-header  blue darken-2">
-                <h4 class="h4-responsive text-white">Hybrid map</h4>
-            </div>
-            <!--/Card image-->
-
-            <!--Card content-->
-            <mdb-card-body class="text-center">
-                <agm-map [latitude]="map.lat" [longitude]="map.lng" [mapTypeId]="'hybrid'" style="height: 300px">
-                    <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
-                </agm-map>
-
-            </mdb-card-body>
-            <!--/.Card content-->
-        </mdb-card>
-        <!--/.Card-->
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-6">
-        <!--Card-->
-        <mdb-card cascade="true" narrower="true" class="mt-5">
-
-            <!--Card image-->
-            <div class="view gradient-card-header  blue darken-2">
-                <h4 class="h4-responsive text-white">Satelite map</h4>
-            </div>
-            <!--/Card image-->
-
-            <!--Card content-->
-            <mdb-card-body class="text-center">
-                <agm-map [latitude]="map.lat" [longitude]="map.lng" [mapTypeId]="'satellite'" style="height: 300px">
-                    <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
-                </agm-map>
-
-            </mdb-card-body>
-            <!--/.Card content-->
-        </mdb-card>
-        <!--/.Card-->
-    </div>
-    <div class="col-md-6">
-        <!--Card-->
-        <mdb-card cascade="true" narrower="true" class="mt-5">
-
-            <!--Card image-->
-            <div class="view gradient-card-header  blue darken-2">
-                <h4 class="h4-responsive text-white">Terrains map</h4>
-            </div>
-            <!--/Card image-->
-
-            <!--Card content-->
-            <mdb-card-body class="text-center">
-                <agm-map [latitude]="map.lat" [longitude]="map.lng" [mapTypeId]="'terrain'" style="height: 300px">
-                    <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
-                </agm-map>
-
-            </mdb-card-body>
-            <!--/.Card content-->
-        </mdb-card>
-        <!--/.Card-->
-    </div>
-</div>
-<div class="row justify-content-center">
-    <div class="col-md-10">
-        <!--Section: Docs link-->
-        <section class="pb-4 pt-5">
-            <panel header="Full documentation" color="primary-color">
-                <p class="card-text">Read the full documentation for these components.</p>
-                <a href="https://mdbootstrap.com/angular/components/maps/" target="_blank" mdbBtn color="primary"
-                   class="waves-effect waves-light">Learn more</a>
-            </panel>
-        </section>
-        <!--/.Section: Docs link-->
-    </div>
-</div>
+<table datatable [dtOptions]="dtOptions" class="row-border hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Foo</td>
+        <td>Bar</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Someone</td>
+        <td>Youknow</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Iamout</td>
+        <td>Ofinspiration</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Yoda</td>
+        <td>Skywalker</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Patrick</td>
+        <td>Dupont</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Barack</td>
+        <td>Obama</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>François</td>
+        <td>Holland</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Michel</td>
+        <td>Popo</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Chuck</td>
+        <td>Norris</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Simon</td>
+        <td>Robin</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Louis</td>
+        <td>Lin</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Zelda</td>
+        <td>Link</td>
+      </tr>
+    </tbody>
+  </table>

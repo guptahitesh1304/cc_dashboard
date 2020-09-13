@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { AuthenticationService } from 'src/app/service/authentication.service';
 
 
 @Component({
@@ -16,12 +17,11 @@ export class NavigationComponent implements OnInit {
   tab3 : any
   Clicked : boolean
 
-  constructor() {
+  constructor(private loginService:AuthenticationService) { 
     this.clicked = this.clicked === undefined ? false : true;
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   setClicked(val: boolean): void {
     this.clicked = val;

@@ -6,25 +6,43 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes.service';
-
+import {CommonModule} from "@angular/common"
 import { ViewsModule } from './views/views.module';
 import { SharedModule } from './shared/shared.module';
 import { ErrorModule } from './views/errors/error.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { DataTablesModule } from 'angular-datatables';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+//import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 
 // main layout
 import { NavigationModule } from './main-layout/navigation/navigation.module';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { CdrTableComponent } from './cdr-table/cdr-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { QPerformanceTableComponent } from './q-performance-table/q-performance-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    LogoutComponent,
+    CdrTableComponent,
+    QPerformanceTableComponent
   ],
   imports: [
     AgmCoreModule.forRoot({
       apiKey: ''
     }),
     BrowserModule,
+    DataTablesModule,
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
     NavigationModule,
@@ -35,9 +53,14 @@ import { NavigationModule } from './main-layout/navigation/navigation.module';
     ViewsModule,
     ErrorModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    CommonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
 })

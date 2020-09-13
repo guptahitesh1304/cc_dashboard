@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./map1.component.scss']
 })
 export class Map1Component implements OnInit {
-  public map: any = { lat: 51.678418, lng: 7.809007 };
-  
-  constructor() { }
+  dtOptions: DataTables.Settings = {};
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers'
+    };
   }
-
 }

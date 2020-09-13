@@ -18,6 +18,13 @@ import { StatsCard2Component } from './dashboards/common/stats-card2/stats-card2
 import { Dashboard1Component } from './dashboards/dashboard1/dashboard1.component';
 import { Profile1Component } from './profile/profile1/profile1.component';
 import { HelpComponent } from './help/help.component';
+import { CdrComponent } from './cdr/cdr.component';
+import { MonthlyCallComponent } from './dashboards/common/monthly-graph/monthly-call/monthly-call.component';
+import { DailyCallsComponent } from './dashboards/common/daily-call-graph/daily-calls/daily-calls.component';
+import { AgentStatsComponent } from './dashboards/common/agent-graph/agent-stats/agent-stats.component';
+import { QueueStatsComponent } from './dashboards/common/queuewise-stats/queue-stats/queue-stats.component';
+import { Part1Component } from './dashboards/common/dashboard-summary/part1/part1.component';
+import { Part2Component } from './dashboards/common/dashboard-summary/part2/part2.component';
 
 
 @NgModule({
@@ -44,6 +51,13 @@ import { HelpComponent } from './help/help.component';
     Dashboard1Component,
     Profile1Component,
     HelpComponent,
+    CdrComponent,
+    MonthlyCallComponent,
+    DailyCallsComponent,
+    AgentStatsComponent,
+    QueueStatsComponent,
+    Part1Component,
+    Part2Component,
 
   ],
   exports: [

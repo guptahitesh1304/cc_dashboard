@@ -1,0 +1,21 @@
+<mdb-card>
+
+    <!--div class="card-header dl-title">DAILY CALL - HOURLY</div-->
+    <div class="view view-cascade gradient-card-header blue-gradient">
+        <div class="card-header-title mb-2">Daily Call - Hourly</div>
+
+    </div>
+
+    <!--Card content-->
+    <mdb-card-body>
+
+        <div style="display: inline-block;height: auto;margin-left: auto;margin-right: auto;width: 100%;"
+            *ngIf="DailyCallChartDatasets.length > 0">
+            <canvas mdbChart [chartType]="chart3Type" [datasets]="DailyCallChartDatasets"
+                [labels]="DailyCallChartLabels" [colors]="DailyCallsChartColors"
+                [options]="DailyCallsChartOptions" [legend]="true">
+            </canvas>
+        </div>
+    </mdb-card-body>
+
+</mdb-card>

@@ -1,0 +1,24 @@
+<mdb-card class="mb-2">
+
+    <!-- Card header -->
+    <div class="card-header">Agent Status</div>
+
+    <!--Card content-->
+    <mdb-card-body>
+        <div class="ta">
+            <div>
+                <!-- <h1>
+                    <strong class="totagent">{{agentStats.totalNumberOfAgents}}</strong>
+                </h1> -->
+            </div>
+        </div>
+        <div style="display: inline-block;height: 300px;margin-left: auto;margin-right: auto;width: 100%;">
+            <canvas mdbChart [chartType]="chart5Type" [datasets]="agentChartData" [labels]="agentChartLabels"
+                [colors]="agentChartColors" [options]="agentChartOptions" [legend]="true">
+            </canvas>
+        </div>
+
+    </mdb-card-body>
+
+</mdb-card>
+<!--/.Card-->

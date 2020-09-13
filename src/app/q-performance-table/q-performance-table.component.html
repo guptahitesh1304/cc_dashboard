@@ -1,0 +1,90 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="queue-perf-table-view">
+      <div class="card">
+        <div class="card-header card-header-primary card-header-icon">
+          <div class="card-icon"><i class="material-icons">assignment</i></div>
+          <h2 class="card-title">Queuewise Performance</h2>
+        </div>
+        <div class="card-body">
+          <div class="toolbar">
+
+            
+          </div>
+          <div class="material-datatables">
+            <div id="datatables_wrapper" class="dataTables_wrapper dt-bootstrap4">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <div class="dataTables_length" id="datatables_length">
+                    AHT = Average Handle time; &nbsp;
+                    AWT = Average Wait Time
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div id="datatables_filter" class="dataTables_filter">
+                    <label class="form-group"><input type="search" class="form-control form-control-sm"
+                        placeholder="Search records" aria-controls="datatables"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mat-elevation-z8">
+              <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Queue Name</th>
+                  <td mat-cell *matCellDef="let element"> {{element.displayName}} ({{element.name}}) </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="waiting">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Calls Waiting</th>
+                  <td mat-cell *matCellDef="let element"> {{element.callsInWaiting}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="agents">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Agents </th>
+                  <td mat-cell *matCellDef="let element"> {{element.loggedInAgents}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="aht">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> AHT</th>
+                  <td mat-cell *matCellDef="let element"> {{element.aht}} </td>
+                </ng-container>
+                <!-- Weight Column -->
+                <ng-container matColumnDef="awt">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> AWT</th>
+                  <td mat-cell *matCellDef="let element"> {{element.awt}} </td>
+                </ng-container>
+                <!-- Weight Column -->
+                <ng-container matColumnDef="Abandond">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Abandond</th>
+                  <td mat-cell *matCellDef="let element"> {{element.totalAbandonedCalls}} </td>
+                </ng-container>
+                <ng-container matColumnDef="total">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Calls </th>
+                  <td mat-cell *matCellDef="let element"> {{element.totalNumberOfCalls}} </td>
+                </ng-container>
+                <ng-container matColumnDef="cb">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Callback Request </th>
+                  <td mat-cell *matCellDef="let element"> {{element.call_back_request}} </td>
+                </ng-container>
+                <ng-container matColumnDef="sl">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Service Leven in %</th>
+                  <td mat-cell *matCellDef="let element" class="text-primary"> {{element.slinPercentage}}</td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+
+              <mat-paginator [pageSizeOptions]="[10, 15, 20]" showFirstLastButtons></mat-paginator>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

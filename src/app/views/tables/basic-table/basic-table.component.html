@@ -1,76 +1,70 @@
-<!--div class="container">
-    <div class="row">
-        <div class="md-form">
-            <input
-              type="text"
-              [(ngModel)]="searchText"
-              class="form-control"
-              id="search"
-              mdbInput
-            />
-            <label for="search">Search</label>
-          </div>
-        <table mdbTable responsive="true" class="z-depth-1">
-            <thead>
-            <tr>
-              <th [mdbTableSort]="elements" sortBy="id"><mdb-icon fas icon="sort"></mdb-icon>ID</th>
-              <th [mdbTableSort]="elements" sortBy="first"><mdb-icon fas icon="sort"></mdb-icon>First</th>
-              <th [mdbTableSort]="elements" sortBy="last"><mdb-icon fas icon="sort"></mdb-icon>Last</th>
-              <th [mdbTableSort]="elements" sortBy="handle"><mdb-icon fas icon="sort"></mdb-icon>Handle</th>
-            </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let el of elements; let i = index">
-                  <th *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex"
-                      scope="row">{{el.id}}</th>
-                  <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.first}}</td>
-                  <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.last}}</td>
-                  <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.handle}}</td>
-                </tr>
-                </tbody>
-                <tfoot class="grey lighten-5 w-100">
-                <tr>
-                  <td colspan="4">
-                    <mdb-table-pagination [tableEl]="tableEl" [searchDataSource]="elements"></mdb-table-pagination>
-                  </td>
-                </tr>
-                </tfoot>
-              </table>
-    </div>
-  </div-->
-  <div class="container">
-    <div class="row cdr">
-      <div class="col-md-6 mx-auto">
-        <div class="md-form">
-          <input type="text" class="form-control" [(ngModel)]="searchText" (keyup)="searchItems()" id="search-input"
-                 mdbInput>
-          <label for="search-input">Search</label>
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="queue-perf-table-view">
+      <div class="card">
+        <div class="card-header card-header-primary card-header-icon">
+          <div class="card-icon"><i class="material-icons">assignment</i></div>
+          <h2 class="card-title">Agents Satistitics</h2>
         </div>
-      </div>
-      
-      <table mdbTable #tableEl="mdbTable" stickyHeader="true" hover="false" striped="true" class="z-depth-1" class="cdr-t"> 
-        <thead class="sticky-top">
-        <tr>
-          <th *ngFor="let head of headElements; let i = index" [mdbTableSort]="elements" [sortBy]="headElements[i]"
-              scope="col">{{head | titlecase}} <mdb-icon fas icon="sort"></mdb-icon>
-          </th>
-        </tr>
-        </thead>
-        <tbody #row>
-        <tr mdbTableCol (rowCreated)="onRowCreate($event)" (rowRemoved)="onRowRemove($event)" *ngFor="let el of elements; let i = index">
-          <th *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex" scope="row">{{el.id}}</th>
-          <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex" class="">{{el.first}}</td>
-          <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.last}}</td>
-          <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.handle}}</td>
-        </tr>
-        </tbody>
-        <tfoot class="grey lighten-5 w-100">
-        <tr>
-          <td colspan="4">
-            <mdb-table-pagination [tableEl]="tableEl" paginationAlign="" [searchDataSource]="elements"></mdb-table-pagination>
-          </td>
-        </tr>
-        </tfoot>
-      </table>
-    </div>
-  </div>
+        <div class="card-body">
+          <div class="toolbar">
+
+            
+          </div>
+          <div class="material-datatables">
+            <div id="datatables_wrapper" class="dataTables_wrapper dt-bootstrap4">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <div class="dataTables_length" id="datatables_length">
+                  
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div id="datatables_filter" class="dataTables_filter">
+                    <label class="form-group"><input type="search" class="form-control form-control-sm"
+                        placeholder="Search records" aria-controls="datatables"></label>
+                  </div>
+                </div>
+              </div>
+            </div><div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="agent">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Taken </th>
+      <td mat-cell *matCellDef="let element"> {{element.agent}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="calls">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Taken </th>
+      <td mat-cell *matCellDef="let element"> {{element.calls}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="missed">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Missed </th>
+      <td mat-cell *matCellDef="let element"> {{element.missed}} </td>
+    </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="duration">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Duration</th>
+      <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
+    </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="talk">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Talk </th>
+      <td mat-cell *matCellDef="let element"> {{element.talk}} </td>
+    </ng-container>
+    <ng-container matColumnDef="wait">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Wait </th>
+      <td mat-cell *matCellDef="let element"> {{element.wait}} </td>
+    </ng-container>
+    <ng-container matColumnDef="hold">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Hold</th>
+      <td mat-cell *matCellDef="let element"> {{element.hold}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div></div></div></div></div></div></div>

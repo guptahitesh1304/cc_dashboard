@@ -1,0 +1,86 @@
+<mdb-card>
+
+    <div class="view view-cascade gradient-card-header blue-gradient">
+        <div class="card-header-title mb-2">Queue Performance</div>
+
+    </div>
+    <!--Card content-->
+    <mdb-card-body>
+
+        <!-- Table  -->
+        <table mdbTable hover="false" striped="true" responsive="true" class="table table-striped queue-perf">
+            <thead class="">
+                <tr>
+                    <th>Queue</th>
+                    <th>Waiting</th>
+                    <th>Agents</th>
+                    <th>AWT</th>
+                    <th>ATT</th>
+                    <th>CB</th>
+                    <th>ABND/Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let queuesDetail of queuesDetails  | slice:0:8"
+                    [ngClass]="{'highlightRow' : queuesDetail.callsInWaiting > 3}">
+                    <td>{{queuesDetail.name}}-{{queuesDetail.displayName}}</td>
+                    <td>{{queuesDetail.callsInWaiting}}</td>
+                    <td>{{queuesDetail.loggedInAgents}}</td>
+                    <td>{{queuesDetail.awt}}</td>
+                    <td>{{queuesDetail.aht}}</td>
+                    <td>{{queuesDetail.call_back_request}}</td>
+                    <td>{{queuesDetail.totalAbandonedCalls}}/{{queuesDetail.totalNumberOfCalls}}</td>
+                    
+                </tr>
+            </tbody>
+            <!--tbody>
+        <tr>
+            
+            <td>501</td>
+            <td>0</td>
+            <td>12</td>
+            <td class="red-text"><i class="fas fa-arrow-up red-text"></i>11.2</td>
+            <td>3.3</td>
+            <td>5</td>
+            <td>5/50</td>
+            <td>90%</td>
+        </tr>
+        <tr>
+            
+            <td>502</td>
+            <td>6</td>
+            <td>7</td>
+            <td>3.45</td>
+            <td>6.34</td>
+            <td>8</td>
+            <td>8/40</td>
+            <td class="red-text"><i class="fas fa-arrow-down red-text"></i>80%</td>
+        </tr>
+        <tr>
+            
+            <td>503</td>
+            <td>5</td>
+            <td>22</td>
+            <td>2.22</td>
+            <td>3.45</td>
+            <td>3</td>
+            <td>3/45</td>
+            <td>94%</td>
+        </tr>
+          <tr>  
+        <td>504</td>
+        <td class="red-text"><i class="fas fa-arrow-up red-text"></i>15</td>
+        <td>6</td>
+        <td>9</td>
+        <td>4.44</td>
+        <td>1</td>
+        <td>1/40</td>
+        <td>99%</td>
+    </tr>
+        </tbody-->
+        </table>
+        <!-- Table  -->
+
+    </mdb-card-body>
+
+</mdb-card>
