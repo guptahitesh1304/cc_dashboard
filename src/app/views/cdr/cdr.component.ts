@@ -30,7 +30,8 @@ export class CdrComponent implements OnInit, AfterViewInit{
   ngOnInit() {
     // console.log("Dashboard Token Value"+this.token)
     this.httpClientService.getTest().subscribe(data => {this.elements = data;
-     console.log(data)})
+     //console.log(data)
+    })
     // for (let i = 1; i <= 25; i++) {
     //    this.elements.push({id: i.toString(), name: 'Wpis ' + i, email: 'Last ' + i, username: 'Handle ' + i});
     // }

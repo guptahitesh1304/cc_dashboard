@@ -404,5 +404,8 @@ footer.page-footer {
 }
 
 table td {
-  font-weight: 500;
+  font-weight: 500 !important;
+}
+.mat-cell, .mat-footer-cell {
+  font-weight: 500 !important;
 }

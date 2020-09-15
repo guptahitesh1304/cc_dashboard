@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AuthenticationService } from '../service/authentication.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import {Md5} from 'ts-md5/dist/md5';
+//import { CookieService } from 'ngx-cookie-service'; 
 
 @Component({
   selector: 'app-login',
@@ -31,7 +32,7 @@ md5 = new Md5();
 
 
   constructor(private router: Router,
-    private loginservice: AuthenticationService) { }
+    private loginservice: AuthenticationService, /*private cookieService: CookieService*/) { }
 
   ngOnInit() {
     //console.log(this.username+' password -'+this.password);
@@ -65,8 +66,8 @@ md5 = new Md5();
 }
 
   checkLogin() {
-    console.log("domain"+this.selectedDay);
-    console.log("username"+this.username);
+    //console.log("domain"+this.selectedDay);
+    //console.log("username"+this.username);
     //console.log("password"+this.password);
     //console.log(this.md5.appendStr(this.password).end());
     this.encrypted_password = Md5.hashStr(this.password);
@@ -76,8 +77,12 @@ md5 = new Md5();
         this.token = data.token;
     sessionStorage.setItem('token', this.token);
     sessionStorage.setItem('dn', this.selectedDay);
+    // this.cookieService.set('token', this.token);  
+    //     this.cookieService.set('dn', this.selectedDay);  
+        //console.log(this.cookieService.get('token'));  
+       // console.log(this.cookieService.get('dn'));
       
-      console.log(data);
+      //console.log(data);
         this.router.navigate([''])
         this.invalidLogin = false
       },

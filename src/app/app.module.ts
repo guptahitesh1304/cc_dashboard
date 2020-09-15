@@ -13,6 +13,7 @@ import { ErrorModule } from './views/errors/error.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { DataTablesModule } from 'angular-datatables';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import {CookieService  } from 'ngx-cookie-service'; 
 //import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
@@ -60,7 +61,7 @@ import { QPerformanceTableComponent } from './q-performance-table/q-performance-
     MatPaginatorModule,
     MatSortModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, CookieService],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
 })

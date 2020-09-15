@@ -36,7 +36,7 @@ getQueuePerformanceData(){
   this.httpClientService.getQueuePerformanceTableForDashboard().subscribe(queuedata => {
     this.queuesDetails = queuedata;
    // this.subscribeToData();
-    console.log(queuedata)
+    //console.log(queuedata)
   });
 }
 
@@ -52,7 +52,7 @@ makePeriodicReq() {
   )
     .subscribe(queuedata => {
       this.queuesDetails = queuedata;
-      console.log(queuedata);
+      //console.log(queuedata);
     });
 }
 

@@ -17,7 +17,9 @@ export class Dashboard1Component implements OnInit {
 
   // queuesDetails: QueuesDetails[];
 
-  subscription: Subscription;
+  subscriptionDashBoardSummary: Subscription;
+  subscriptionMonthlyGraph: Subscription;
+  subscriptionAgentGraph: Subscription;
    agentStats: AgentStats;
    dashboardSummary: DashboardSummary;
    monthlyCDRGraph: MonthlyCDRGraph;
@@ -97,7 +99,7 @@ public thisMonth = this.monthNames[(new Date()).getMonth()];
     //{ data: [7, 1, 5, 2] }
 ];
 
-  public agentChartLabels: Array<any> = ['Working', 'Ready', 'Talking'];
+  public agentChartLabels: Array<any> = ['Working', 'Talking'];
 
   public agentChartColors: Array<any> = [{
     hoverBorderColor: ['rgba(0, 0, 0, 0.1)', 'rgba(0, 0, 0, 0.1)', 'rgba(0, 0, 0, 0.1)', 'rgba(0, 0, 0, 0.1)'],
@@ -274,28 +276,34 @@ public thisMonth = this.monthNames[(new Date()).getMonth()];
   //   });
   // }
   getDashBoardSummaryData() {
-    this.subscription = timer(0, 10000).pipe(
+    this.subscriptionDashBoardSummary = timer(0, 10000).pipe(
       switchMap(() => this.httpClientService.getDashboardSummary())
     )
       .subscribe(dashboarddata => {
         this.dashboardSummary = dashboarddata;
-        console.log(dashboarddata);
+        //console.log(dashboarddata);
       });
   }
 
   getAgentGraphData(){
-    this.httpClientService.getAgentStats().subscribe(agentdata => {
+    this.subscriptionAgentGraph = timer(0, 30000).pipe(
+      switchMap(() => this.httpClientService.getAgentStats())
+    )
+      .subscribe(agentdata => {
       this.agentStats = agentdata;
-      console.log(agentdata)
-      const data0 = [this.agentStats.agent_Working, this.agentStats.agent_Ready, this.agentStats.agent_Talking];
+      //console.log(agentdata)
+      const data0 = [this.agentStats.agent_Working, this.agentStats.agent_Talking];
       this.agentChartData[0].data = data0;
     });
   }
 
   getMonthlyGraphData(){
-    this.httpClientService.getMonthlyCDRGraph().subscribe(monthlyGraphData => {
+    this.subscriptionMonthlyGraph = timer(0, 60000).pipe(
+      switchMap(() => this.httpClientService.getMonthlyCDRGraph())
+    )
+      .subscribe(monthlyGraphData => {
       this.monthlyCDRGraph = monthlyGraphData;
-      console.log(this.monthlyCDRGraph)
+      //console.log(this.monthlyCDRGraph)
       const data0 = [this.monthlyCDRGraph.totalCallRecieved];
       const data1 = [this.monthlyCDRGraph.totalInboundCalls];
       const data2 = [this.monthlyCDRGraph.totalOutboundCalls];
@@ -312,11 +320,11 @@ public thisMonth = this.monthNames[(new Date()).getMonth()];
       this.chartLabels[0] = this.thisMonth;
       //this.chartDatasets[5].data = data5;
 
-      console.log("rec" + data0)
-      console.log("IN" + data1)
-      console.log("Out" + data2)
-      console.log("Ans" + data3)
-      console.log("ABnd" + data4)
+      // console.log("rec" + data0)
+      // console.log("IN" + data1)
+      // console.log("Out" + data2)
+      // console.log("Ans" + data3)
+      // console.log("ABnd" + data4)
       //console.log("Missed" + data5)
 
     });
@@ -352,7 +360,9 @@ this.getDashBoardSummaryData();
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    this.subscriptionAgentGraph.unsubscribe();
+    this.subscriptionDashBoardSummary.unsubscribe();
+    this.subscriptionMonthlyGraph.unsubscribe();
   }
 }
 

@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "postinstall": "ngcc",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -42,6 +43,7 @@
     "jquery": "^3.5.1",
     "material-table": "^1.67.1",
     "ng-uikit-pro-standard": "^1.0.0",
+    "ngx-cookie-service": "^10.0.1",
     "rxjs": "^6.5.5",
     "rxjs-compat": "^6.6.3",
     "rxjs-observable": "0.0.7",

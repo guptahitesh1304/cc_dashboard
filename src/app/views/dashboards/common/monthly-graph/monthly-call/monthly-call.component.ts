@@ -103,7 +103,7 @@ public thisMonth = this.monthNames[(new Date()).getMonth()];
 getMonthlyGraphData(){
     this.httpClientService.getMonthlyCDRGraph().subscribe(monthlyGraphData => {
       this.monthlyCDRGraph = monthlyGraphData;
-      console.log(this.monthlyCDRGraph)
+      //console.log(this.monthlyCDRGraph)
       const data0 = [this.monthlyCDRGraph.totalCallRecieved];
       const data1 = [this.monthlyCDRGraph.totalInboundCalls];
       const data2 = [this.monthlyCDRGraph.totalOutboundCalls];
@@ -120,11 +120,11 @@ getMonthlyGraphData(){
       this.monthlychartLabels[0] = this.thisMonth;
       //this.chartDatasets[5].data = data5;
 
-      console.log("rec" + data0)
-      console.log("IN" + data1)
-      console.log("Out" + data2)
-      console.log("Ans" + data3)
-      console.log("ABnd" + data4)
+      // console.log("rec" + data0)
+      // console.log("IN" + data1)
+      // console.log("Out" + data2)
+      // console.log("Ans" + data3)
+      // console.log("ABnd" + data4)
       //console.log("Missed" + data5)
 
     });
@@ -144,7 +144,7 @@ makePeriodicReq() {
   )
     .subscribe(monthlyGraphData => {
       this.monthlyCDRGraph = monthlyGraphData;
-      console.log(this.monthlyCDRGraph)
+      //console.log(this.monthlyCDRGraph)
       const data0 = [this.monthlyCDRGraph.totalCallRecieved];
       const data1 = [this.monthlyCDRGraph.totalInboundCalls];
       const data2 = [this.monthlyCDRGraph.totalOutboundCalls];
@@ -161,11 +161,11 @@ makePeriodicReq() {
       this.monthlychartLabels[0] = this.thisMonth;
       //this.chartDatasets[5].data = data5;
 
-      console.log("rec" + data0)
-      console.log("IN" + data1)
-      console.log("Out" + data2)
-      console.log("Ans" + data3)
-      console.log("ABnd" + data4)
+      // console.log("rec" + data0)
+      // console.log("IN" + data1)
+      // console.log("Out" + data2)
+      // console.log("Ans" + data3)
+      // console.log("ABnd" + data4)
       //console.log("Missed" + data5)
       
     });

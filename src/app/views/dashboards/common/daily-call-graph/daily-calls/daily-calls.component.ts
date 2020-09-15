@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientService, DailyCallGraph } from 'src/app/service/http-client.service';
+import { Subscription, timer } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 import 'chart.piecelabel.js';
 import 'chartjs-plugin-datalabels'
 
@@ -9,6 +11,8 @@ import 'chartjs-plugin-datalabels'
   styleUrls: ['./daily-calls.component.css']
 })
 export class DailyCallsComponent implements OnInit {
+
+  subscriptionMonthlyGraph: Subscription;
 
   daily_graph_data:DailyCallGraph;
 
@@ -109,19 +113,22 @@ export class DailyCallsComponent implements OnInit {
   }
 
   getDailyGraphData(){
-    this.httpClientService.getDailyCallsGraph().subscribe(dailyCallsGraphdata => {
+    this.subscriptionMonthlyGraph = timer(0, 30000).pipe(
+      switchMap(() => this.httpClientService.getDailyCallsGraph())
+    )
+      .subscribe(dailyCallsGraphdata => {
       this.daily_graph_data = dailyCallsGraphdata;
       const key_hurs = Object.keys(dailyCallsGraphdata);
       this.DailyCallChartLabels = key_hurs;
       const data0 = Object.values(dailyCallsGraphdata);
       this.DailyCallChartDatasets[0].data = data0;
-      console.log("this.daily_graph_data")
-      console.log(this.daily_graph_data)
-      console.log("key_hurs")
-      console.log(key_hurs)
-      console.log(data0)
-      console.log("this.DailyCallChartLabels")
-      console.log(data0)
+      // console.log("this.daily_graph_data")
+      // console.log(this.daily_graph_data)
+      // console.log("key_hurs")
+      // console.log(key_hurs)
+      // console.log(data0)
+      // console.log("this.DailyCallChartLabels")
+      // console.log(data0)
     });
 
   }
@@ -135,5 +142,8 @@ export class DailyCallsComponent implements OnInit {
 this.getDailyGraphData();
 //this.refresh();
     
+  }
+  ngOnDestroy() {
+    this.subscriptionMonthlyGraph.unsubscribe();
   }
 }
