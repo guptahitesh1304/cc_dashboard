@@ -4,6 +4,8 @@ import { MatSort } from '@angular/material/sort';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { HttpClientService } from '../service/http-client.service';
 import { QueuesDetailsModal } from './QueuesDetailsModal';
+import { Subscription, timer } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-q-performance-table',
@@ -11,6 +13,8 @@ import { QueuesDetailsModal } from './QueuesDetailsModal';
   styleUrls: ['./q-performance-table.component.scss']
 })
 export class QPerformanceTableComponent implements OnInit {
+
+  subscriptionQPerf: Subscription;
   ELEMENT_DATA:QueuesDetailsModal[];
   //displayedColumns: string[] = ['userId', 'id', 'title'];
   displayedColumns: string[] = ['name', 'waiting', 'agents', 'aht', 'awt', 'Abandond', 'total', 'cb','sl'];
@@ -29,8 +33,14 @@ export class QPerformanceTableComponent implements OnInit {
   }
 
   public getQueuePerformanceTable(){
-    let resp = this.httpService.getAllQueues();
-    resp.subscribe(cdr =>this.dataSource.data=cdr as QueuesDetailsModal[]);
+    this.subscriptionQPerf = timer(0, 20000).pipe(
+      switchMap(() => this.httpService.getAllQueues())
+    )
+      .subscribe(cdr =>this.dataSource.data=cdr as QueuesDetailsModal[]);
 
+  }
+
+  ngOnDestroy() {
+    this.subscriptionQPerf.unsubscribe();
   }
 }

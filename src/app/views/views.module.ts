@@ -10,7 +10,7 @@ import { CalendarModule,  } from 'angular-calendar';
 import { SharedModule } from '../shared/shared.module';
 
 import { FooterComponent } from '../main-layout/footer/footer.component';
-import { BasicTableComponent } from './tables/basic-table/basic-table.component';
+import { AgentStatsTableComponent } from './tables/basic-table/basic-table.component';
 import { ModalsComponent } from './modals/modals.component';
 import { Map1Component } from './maps/map1/map1.component';
 import { StatsCardComponent } from './dashboards/common/stats-card/stats-card.component';
@@ -43,7 +43,7 @@ import { Part2Component } from './dashboards/common/dashboard-summary/part2/part
   ],
   declarations: [
     FooterComponent,
-    BasicTableComponent,
+    AgentStatsTableComponent,
     ModalsComponent,
     Map1Component,
     StatsCardComponent,
@@ -62,7 +62,7 @@ import { Part2Component } from './dashboards/common/dashboard-summary/part2/part
   ],
   exports: [
     FooterComponent,
-    BasicTableComponent,
+    AgentStatsTableComponent,
     ModalsComponent,
     Map1Component,
     StatsCardComponent,

@@ -79,7 +79,7 @@ export class AgentStatsComponent implements OnInit {
   getAgentGraphData(){
     this.httpClientService.getAgentStats().subscribe(agentdata => {
       this.agentStats = agentdata;
-      console.log(agentdata)
+      //console.log(agentdata)
       const data0 = [this.agentStats.agent_Working, this.agentStats.agent_Ready, this.agentStats.agent_Talking];
       this.agentChartData[0].data = data0;
     });

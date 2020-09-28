@@ -6,28 +6,31 @@ import { HttpClientService } from 'src/app/service/http-client.service';
 import { AgentStatsModel } from './agent-stats-modal';
 
 
+
 @Component({
   selector: 'app-basic-table',
   templateUrl: './basic-table.component.html',
   styleUrls: ['./basic-table.component.scss']
 })
 
-export class BasicTableComponent implements OnInit {
-  ELEMENT_DATA:AgentStatsModel[];
+export class AgentStatsTableComponent implements OnInit {
+  ELEMENT_DATA: AgentStatsModel[];
   //displayedColumns: string[] = ['userId', 'id', 'title'];
-  displayedColumns: string[] = ['agent','calls', 'missed', 'duration', 'talk', 'wait', 'ring',  'hold', ];
-  dataSource = new MatTableDataSource<AgentStatsModel>(this.ELEMENT_DATA);
+  //displayedColumns: string[] = ['agent', 'calls', 'missed', 'duration', 'talk', 'wait', 'ring', 'hold',];
+  //dataSource = this.ELEMENT_DATA;
 
 
-  constructor(private httpService: HttpClientService){}
+  constructor(private httpService: HttpClientService) { }
 
   ngOnInit() {
     this.getAgentStatsData();
   }
 
-  public getAgentStatsData(){
-    let resp = this.httpService.getAgentPerformanceComplete();
-    resp.subscribe(cdr =>this.dataSource.data=cdr as AgentStatsModel[]);
-console.log(this.dataSource.data);
+  public getAgentStatsData(): void {
+    this.httpService.getAgentPerformanceComplete()
+      .subscribe(
+        resultArray => this.ELEMENT_DATA = resultArray,
+        error => console.log("Error :: " + error)
+      )
   }
 }

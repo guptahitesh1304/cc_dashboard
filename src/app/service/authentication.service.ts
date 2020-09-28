@@ -37,7 +37,7 @@ export class AuthenticationService {
       sessionStorage.setItem('dn',domain);
       const headers = new HttpHeaders({ 'Content-Type': 'application/json', 'No-Auth': 'False' });
       //return this.httpClient.get<User>('http://localhost:8080/dashboard/loginTest/'+username+"/"+password+"/"+domain,{headers}).pipe(
-      return this.httpClient.get<User>('http://192.168.1.15:8080/dashboard/login/'+username+"/"+password+"/"+domain,{headers}).pipe(
+      return this.httpClient.get<User>('http://192.168.42.247:8080/dashboard/login/'+username+"/"+password+"/"+domain,{headers}).pipe(
         map(
           userData => {
             let tokenStr= userData.token;   
@@ -79,22 +79,22 @@ export class AuthenticationService {
     let tokenSession = sessionStorage.getItem('token')
     let tokenCookies = this.cookieService.get('token')
     //console.log(!(user === null))
-    console.log("cookies and session")
+    //console.log("cookies and session")
     
-    console.log("tokenCookies"+tokenCookies)
+    //console.log("tokenCookies"+tokenCookies)
 
     if(!(tokenSession === null)){
-      console.log("tokenSession")
-      console.log(tokenSession === null)
+      //console.log("tokenSession")
+      //console.log(tokenSession === null)
       return true;
     }
-    else if(!(tokenCookies.length < 2)){
-      console.log("cookies leangth gt 2")
-      console.log(tokenCookies === null)
+    else if(!(tokenCookies.length < 10)){
+      //console.log("cookies leangth gt 2")
+      //console.log(tokenCookies === null)
       return true;
     }
     else{
-      console.log("FALSE_____")
+      //console.log("FALSE_____")
       return false;
     }
    // return !((tokenCookies === null) || (tokenSession === null))

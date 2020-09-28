@@ -1,7 +1,7 @@
 
 import { Map1Component } from './views/maps/map1/map1.component';
 import { ModalsComponent } from './views/modals/modals.component';
-import { BasicTableComponent } from './views/tables/basic-table/basic-table.component';
+import { AgentStatsTableComponent } from './views/tables/basic-table/basic-table.component';
 import { Profile1Component } from './views/profile/profile1/profile1.component';
 import { RouterModule, Route } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
@@ -27,9 +27,9 @@ const routes: Route[] = [
       { path: 'profile1', component: Profile1Component, canActivate:[AuthGaurdService] },
     ]
   },
-  { path: 'tables', children:
+  { path: 'stats', children:
     [
-      { path: 'table1', component: BasicTableComponent, canActivate:[AuthGaurdService] },
+      { path: 'soa', component: AgentStatsTableComponent, canActivate:[AuthGaurdService] },
     ]
   },
   { path: 'maps', children:

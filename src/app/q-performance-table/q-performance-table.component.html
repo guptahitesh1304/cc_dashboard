@@ -40,7 +40,8 @@
                 <!-- Name Column -->
                 <ng-container matColumnDef="waiting">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header> Calls Waiting</th>
-                  <td mat-cell *matCellDef="let element"> {{element.callsInWaiting}} </td>
+                  <td mat-cell *matCellDef="let element" [ngClass]="{'highlightRow' : element.callsInWaiting > 3}"> 
+                    {{element.callsInWaiting}} </td>
                 </ng-container>
 
                 <!-- Weight Column -->

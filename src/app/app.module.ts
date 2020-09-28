@@ -13,7 +13,7 @@ import { ErrorModule } from './views/errors/error.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { DataTablesModule } from 'angular-datatables';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
-import {CookieService  } from 'ngx-cookie-service'; 
+import {CookieService  } from 'ngx-cookie-service';
 //import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
@@ -29,6 +29,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { QPerformanceTableComponent } from './q-performance-table/q-performance-table.component';
+import { MainPipeModule } from './main-pipe/main-pipe.module';
+
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import { QPerformanceTableComponent } from './q-performance-table/q-performance-
     CommonModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MainPipeModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, CookieService],
   bootstrap: [AppComponent],

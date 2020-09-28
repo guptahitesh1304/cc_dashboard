@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs'
+import { AgentStatsModel } from '../views/tables/basic-table/agent-stats-modal';
 
 export class JSONTest{
  
@@ -112,47 +113,47 @@ export class HttpClientService {
     return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/employees');
   }
 
-  getAgentPerformanceComplete(): Observable<any>{
+  getAgentPerformanceComplete(): Observable<AgentStatsModel[]>{
     
-    return this.httpClient.get('http://192.168.1.15:8080/dashboard/getAgentPerformanceComplete/');
+    return this.httpClient.get<AgentStatsModel[]>('http://192.168.42.247:8080/dashboard/getAgentPerformanceComplete/');
     //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
   }
 
   getAllQueues(): Observable<any>{
     
-    return this.httpClient.get('http://192.168.1.15:8080/dashboard/getQueuePerformanceTable/');
+    return this.httpClient.get('http://192.168.42.247:8080/dashboard/getQueuePerformanceTable/');
     //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
   }
 
   getQueuePerformanceTableForDashboard(): Observable<any>{
     
-    return this.httpClient.get('http://192.168.1.15:8080/dashboard/getQueuePerformanceTableForDashboard/');
+    return this.httpClient.get('http://192.168.42.247:8080/dashboard/getQueuePerformanceTableForDashboard/');
     //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
   }
 
   getAgentStats(): Observable<any>{
     
-    return this.httpClient.get<AgentStats>('http://192.168.1.15:8080/dashboard/getAgentStatsToDashboard/');
+    return this.httpClient.get('http://192.168.42.247:8080/dashboard/getAgentStatsToDashboard/');
     //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
   }
 
   getDashboardSummary(): Observable<any>{
     
-    return this.httpClient.get<DashboardSummary>('http://192.168.1.15:8080/dashboard/getQueueDashboardSummary/');
+    return this.httpClient.get<DashboardSummary>('http://192.168.42.247:8080/dashboard/getQueueDashboardSummary/');
     //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
   }
   getMonthlyCDRGraph(): Observable<any>{
     
-    return this.httpClient.get<MonthlyCDRGraph>('http://192.168.1.15:8080/dashboard/getMonthlyCDRGraphData/');
+    return this.httpClient.get<MonthlyCDRGraph>('http://192.168.42.247:8080/dashboard/getMonthlyCDRGraphData/');
   }
   getMonthlyCDRGraphTest(): Observable<any>{
     
-    return this.httpClient.get<MonthlyCDRGraph>('http://192.168.1.15:8080/getMonthlyCDRGraphDataTest/');
+    return this.httpClient.get<MonthlyCDRGraph>('http://192.168.42.247:8080/getMonthlyCDRGraphDataTest/');
   }
 
   getDailyCallsGraph(): Observable<any>{
     
-    return this.httpClient.get('http://192.168.1.15:8080/dashboard/getDailyCallsGraph/');
+    return this.httpClient.get('http://192.168.42.247:8080/dashboard/getDailyCallsGraph/');
     
   }
 
@@ -162,7 +163,7 @@ export class HttpClientService {
   }
 
   getCDR(): Observable<any>{
-    return this.httpClient.get('http://192.168.1.15:8080/dashboard/getacd-cdr');
+    return this.httpClient.get('http://192.168.42.247:8080/dashboard/getacd-cdr');
     //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
   }
 }
