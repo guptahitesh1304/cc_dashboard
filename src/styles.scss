@@ -168,8 +168,11 @@ table.queue-perf{
   }
 .queue-perf td {padding:.1rem 1px .2rem !important; 
   text-align: center;
-  font-weight: 700;
+  font-weight: 700 !important;
   overflow: Hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100px;
 //border: none !important;
 }
 .call-monthly-chart{padding-left: 0px !important;}
@@ -258,12 +261,15 @@ table.queue-perf{
     margin: 130px;}
     .margin-top-time{margin-top: -85px;}
     .mt-5{margin-top: 10px !important;}
-.navbar-brand img{width: 60px !important;}
+.navbar-brand img{width: 0px !important;}
 .navbar-brand {
-  font-size: 18px;
+  font-size: 25px;
   padding: 0px;
-  //color: #d9d9d9 !important;
+  font-family: sans-serif;
   color: #fff !important;
+  font-weight: 900 !important;
+  margin-top: -10px;
+  margin-left: -15px;
 }
 .navbar .pad-top{padding-top: 6px;}
 .navbar {
@@ -329,7 +335,7 @@ a.waves-effect, a.waves-light {
 //.form-control {color: cornsilk !important}; 
 .fas {color: #fff !important;}
 .highlightRow {
-  background: #ff3333ab!important;
+  background: #ff3333ab !important;
   color: #fff !important;
 }
 
@@ -367,6 +373,7 @@ th.mat-sort-header-sorted {
 .main-content .queue-perf-table-view .card .card-header.card-header-icon .card-title, .card .card-header.card-header-text .card-title {
   margin-top: 15px;
   color: #3c4858;
+  font-size: 30px;
   
 }
 .main-content .queue-perf-table-view .card .card-header{
@@ -408,4 +415,20 @@ table td {
 }
 .mat-cell, .mat-footer-cell {
   font-weight: 500 !important;
+}
+.as-table{margin-bottom: 10px;}
+.as-table table td {
+  font-weight: 600 !important;
+}
+.as-table table th {
+  font-weight: 600 !important;
+}
+.as-table-header{
+padding: 15px;
+font-size: 20px;
+font-weight: bold;
+color:dimgray;
+}
+.sign-in{
+  font-size: 1rem !important;
 }

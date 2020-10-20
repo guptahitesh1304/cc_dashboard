@@ -110,37 +110,37 @@ export class HttpClientService {
      getEmployees()
   {
     console.log("test call");
-    return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/employees');
+    return this.httpClient.get<QueuesDetails[]>('http://192.168.42.247:8080/employees');
   }
 
   getAgentPerformanceComplete(): Observable<AgentStatsModel[]>{
     
     return this.httpClient.get<AgentStatsModel[]>('http://192.168.42.247:8080/dashboard/getAgentPerformanceComplete/');
-    //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
+    //return this.httpClient.get<QueuesDetails[]>('http://192.168.42.247:8080/QueuePerformanceTableTest/'+token);
   }
 
   getAllQueues(): Observable<any>{
     
     return this.httpClient.get('http://192.168.42.247:8080/dashboard/getQueuePerformanceTable/');
-    //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
+    //return this.httpClient.get<QueuesDetails[]>('http://192.168.42.247:8080/QueuePerformanceTableTest/'+token);
   }
 
   getQueuePerformanceTableForDashboard(): Observable<any>{
     
     return this.httpClient.get('http://192.168.42.247:8080/dashboard/getQueuePerformanceTableForDashboard/');
-    //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
+    //return this.httpClient.get<QueuesDetails[]>('http://192.168.42.247:8080/QueuePerformanceTableTest/'+token);
   }
 
   getAgentStats(): Observable<any>{
     
     return this.httpClient.get('http://192.168.42.247:8080/dashboard/getAgentStatsToDashboard/');
-    //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
+    //return this.httpClient.get<QueuesDetails[]>('http://192.168.42.247:8080/QueuePerformanceTableTest/'+token);
   }
 
   getDashboardSummary(): Observable<any>{
     
     return this.httpClient.get<DashboardSummary>('http://192.168.42.247:8080/dashboard/getQueueDashboardSummary/');
-    //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
+    //return this.httpClient.get<QueuesDetails[]>('http://192.168.42.247:8080/QueuePerformanceTableTest/'+token);
   }
   getMonthlyCDRGraph(): Observable<any>{
     
@@ -159,11 +159,11 @@ export class HttpClientService {
 
   getTest(): Observable<any>{
     return this.httpClient.get('https://jsonplaceholder.typicode.com/albums');
-    //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
+    //return this.httpClient.get<QueuesDetails[]>('http://192.168.42.247:8080/QueuePerformanceTableTest/'+token);
   }
 
   getCDR(): Observable<any>{
     return this.httpClient.get('http://192.168.42.247:8080/dashboard/getacd-cdr');
-    //return this.httpClient.get<QueuesDetails[]>('http://192.168.1.15:8080/QueuePerformanceTableTest/'+token);
+    //return this.httpClient.get<QueuesDetails[]>('http://192.168.42.247:8080/QueuePerformanceTableTest/'+token);
   }
 }

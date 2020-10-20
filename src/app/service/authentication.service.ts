@@ -37,12 +37,13 @@ export class AuthenticationService {
       sessionStorage.setItem('dn',domain);
       const headers = new HttpHeaders({ 'Content-Type': 'application/json', 'No-Auth': 'False' });
       //return this.httpClient.get<User>('http://localhost:8080/dashboard/loginTest/'+username+"/"+password+"/"+domain,{headers}).pipe(
+        //return this.httpClient.get<User>('http://192.168.42.247:8080/dashboard/login/'+username+"/"+password+"/"+domain,{headers}).pipe(
       return this.httpClient.get<User>('http://192.168.42.247:8080/dashboard/login/'+username+"/"+password+"/"+domain,{headers}).pipe(
         map(
           userData => {
             let tokenStr= userData.token;   
            sessionStorage.setItem('token', tokenStr);
-          sessionStorage.setItem('username',username);
+          //sessionStorage.setItem('username',username);
           sessionStorage.setItem('dn',domain);
           this.cookieService.set('token', tokenStr);  
         this.cookieService.set('dn', domain);  
